@@ -1,0 +1,385 @@
+{
+  "match_id": "neighborhood",
+  "segment_len_s": 5.0,
+  "parse_rate": 1.0,
+  "segments": [
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0001",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 1,
+      "light": "D",
+      "note": "Calm and quiet",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0002",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 1,
+      "light": "N",
+      "note": "A person wearing a white top and pink shorts is walking on the sidewalk near a residential street.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0003",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 1,
+      "light": "U",
+      "note": "A person wearing a white top and light-colored shorts is walking along a sidewalk in a residential area.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0004",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "U",
+      "note": "A silver car is seen driving on a residential street, moving from the left side of the frame toward the right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0005",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "M",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "N",
+      "note": "A silver sedan is seen driving along a residential street, moving from the left side of the frame toward the right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0006",
+      "part_id": "20261001_072603_neighborhood_20260901_chunk_0006",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 1,
+      "light": "N",
+      "note": "A person wearing a white top is walking on the sidewalk in the lower left corner of the frame, moving from left to right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0001",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 1,
+      "light": "U",
+      "note": "A person wearing a white outfit is walking on the sidewalk in the bottom left corner of the frame, moving from left to right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0002",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Stationary vehicle",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0003",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "U",
+      "note": "A white pickup truck enters the frame from the left and drives along the road.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0004",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "N",
+      "note": "A light gray pickup truck is driving on a residential street, moving from the left side of the frame toward the right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0005",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "N",
+      "note": "A gray pickup truck is seen driving on a residential street, moving from the left side of the frame toward the right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0006",
+      "part_id": "20261001_072628_neighborhood_20260901_chunk_0007",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_072628_neighborhood_20260901_chunk_0007_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "M",
+      "scene": "H",
+      "direction": "R",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Steady course",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0001",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "M",
+      "scene": "R",
+      "direction": "R",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Steady pace",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0002",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "F",
+      "scene": "R",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "U",
+      "note": "A silver SUV is seen driving along a residential street, moving from the left side of the frame toward the right.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0003",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Stationary vehicle",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0004",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "U",
+      "scene": "R",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Calm and still",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0005",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "M",
+      "scene": "R",
+      "direction": "R",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Calm and quiet",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0006",
+      "part_id": "20261001_073133_neighborhood_20260901_chunk_0019",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_073133_neighborhood_20260901_chunk_0019_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4",
+      "camera_id": "neighborhood_cam-1",
+      "flow": "M",
+      "scene": "R",
+      "direction": "R",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 1,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Calm and routine",
+      "parse_ok": true
+    }
+  ]
+}

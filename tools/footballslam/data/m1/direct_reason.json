@@ -1,0 +1,16 @@
+[
+  {
+    "file": "seg2.mp4",
+    "t0": 5.0,
+    "t1": 10.0,
+    "text": "POSSESSION: TEAM_A\nDIRECTION: LEFT\nZONE: ATTACKING\nEVENTS: shot\nBALL_VISIBLE: YES\nPLAYERS_VISIBLE: 11\nTEMPO: FAST\nNOTE: The ball is deflected by a defender before reaching the goalkeeper.",
+    "error": null
+  },
+  {
+    "file": "seg3.mp4",
+    "t0": 10.0,
+    "t1": 11.83,
+    "text": "POSSESSION: TEAM_A\nDIRECTION: LEFT\nZONE: ATTACKING\nEVENTS: shot\nBALL_VISIBLE: YES\nPLAYERS_VISIBLE: 10\nTEMPO: FAST\nNOTE: The goalkeeper dives to his right to make a save.",
+    "error": null
+  }
+]

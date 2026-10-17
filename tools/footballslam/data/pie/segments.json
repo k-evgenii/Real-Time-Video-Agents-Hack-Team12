@@ -1,0 +1,385 @@
+{
+  "match_id": "pie",
+  "segment_len_s": 5.0,
+  "parse_rate": 1.0,
+  "segments": [
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0001",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "A",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "Traffic appears to be stationary or moving very slowly.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0002",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 5,
+      "n_peds": 2,
+      "light": "D",
+      "note": "The traffic light facing the camera is red, requiring vehicles to remain stopped.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0003",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "Traffic is stopped at a red light.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0004",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "The traffic light ahead is red, causing the vehicles to remain stationary.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0005",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "Traffic is stopped at a red light.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0006",
+      "part_id": "20261001_062240_set02_video_chunk_0010",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_062240_set02_video_chunk_0010_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 5,
+      "n_peds": 2,
+      "light": "D",
+      "note": "Traffic is stopped at a red light.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0001",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "F",
+      "scene": "S",
+      "direction": "R",
+      "events": [
+        "cyclist"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "No vehicles are blocking the lanes, and there are no visible violations or hazards.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0002",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "M",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights or stop signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0003",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 1,
+      "light": "D",
+      "note": "No traffic lights or road signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0004",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights or road signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0005",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 2,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights or road signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0006",
+      "part_id": "20261001_063740_set03_video_chunk_0014",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063740_set03_video_chunk_0014_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 2,
+      "n_peds": 1,
+      "light": "D",
+      "note": "No traffic lights or road signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0001",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 2,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights, signs, or other vehicles visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0002",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "R",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "The vehicles are stationary, and there are no apparent hazards or violations in the scene.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0003",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "S",
+      "direction": "T",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights or road signs visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0004",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "S",
+      "scene": "R",
+      "direction": "U",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "The vehicles are stationary, suggesting a traffic jam or a stop at an intersection ahead.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0005",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "F",
+      "scene": "S",
+      "direction": "A",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 3,
+      "n_peds": 2,
+      "light": "D",
+      "note": "No traffic lights or other traffic control devices visible",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0006",
+      "part_id": "20261001_063806_set03_video_chunk_0015",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_063806_set03_video_chunk_0015_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+      "camera_id": "pie_cam-3",
+      "flow": "F",
+      "scene": "S",
+      "direction": "R",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 4,
+      "n_peds": 1,
+      "light": "D",
+      "note": "No vehicles are blocking the lanes, and there are no visible violations or hazards.",
+      "parse_ok": true
+    }
+  ]
+}

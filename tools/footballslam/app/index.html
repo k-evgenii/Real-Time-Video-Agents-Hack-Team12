@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traffic episodes</title>
+  <script>
+    (function () {
+      var p = location.pathname;
+      if (p.length > 1 && !p.endsWith("/") && !/\.[a-z0-9]+$/i.test(p)) {
+        location.replace(p + "/" + location.search + location.hash);
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #10140f;
+      --panel: #1a2218;
+      --line: #2c3828;
+      --text: #f3f6ef;
+      --muted: #b7c3ae;
+      --white: #f4f4f4;
+      --red: #d24b4b;
+      --accent: #d6ff4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 18px/1.4 "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a { color: var(--accent); }
+    header, main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display: flex; justify-content: space-between; gap: 16px; align-items: end; }
+    h1 { margin: 0; font-size: 40px; letter-spacing: -0.03em; }
+    .eyebrow { margin: 0 0 4px; color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .banner {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: #24301c;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+    .layout { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 16px; }
+    video { width: 100%; background: #000; border-radius: 12px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    h2 { margin: 0 0 8px; font-size: 22px; }
+    button.seg {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #121810;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+    }
+    button.seg strong { color: var(--accent); }
+    .lane { display: flex; height: 36px; border-radius: 8px; overflow: hidden; background: #0c0f0b; margin: 10px 0 4px; }
+    .lane span { display: flex; align-items: center; justify-content: center; font-size: 13px; }
+    .gap { background: #3a3a3a; color: #ddd; }
+    .atk { background: #f4f4f4; color: #111; }
+    dl { display: grid; grid-template-columns: 120px 1fr; gap: 6px 10px; margin: 0; }
+    dt { color: var(--muted); }
+    dd { margin: 0; }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Same archive as team search</p>
+      <h1>Traffic episodes</h1>
+    </div>
+    <div>
+      <a id="all-videos" href="https://team-12-vss.thecosmoslabs.com/search">All videos</a>
+      <p id="clock">0:00</p>
+    </div>
+  </header>
+  <main>
+    <p class="banner" id="banner"></p>
+    <div class="layout">
+      <section class="panel">
+        <video id="video" controls playsinline preload="metadata"></video>
+        <div class="lane" id="lane" aria-label="Clip timeline"></div>
+        <p id="lane-caption"></p>
+      </section>
+      <aside>
+        <section class="panel">
+          <h2>I-24 on search</h2>
+          <div id="catalog"></div>
+        </section>
+        <section class="panel" style="margin-top:16px">
+          <h2>Parsed moments</h2>
+          <div id="moments"></div>
+        </section>
+        <section class="panel" style="margin-top:16px">
+          <h2>This episode</h2>
+          <dl id="attack"></dl>
+        </section>
+        <section class="panel" style="margin-top:16px">
+          <h2>Anomaly</h2>
+          <p id="anomaly"></p>
+          <button id="moment" class="seg" type="button"></button>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <script>
+    const video = document.getElementById("video");
+    video.src = "media/match";
+    fetch("api/match").then((r) => r.json()).then((match) => {
+      const dur = match.duration_s;
+      document.getElementById("banner").textContent = match.banner;
+      const lane = document.getElementById("lane");
+      const gap = document.createElement("span");
+      gap.className = "gap";
+      gap.style.flex = String(match.unparsed.t1 - match.unparsed.t0);
+      gap.textContent = "moderate";
+      lane.appendChild(gap);
+      const atk = document.createElement("span");
+      atk.className = "atk";
+      atk.style.flex = String(match.attack.t1 - match.attack.t0);
+      atk.textContent = "free flow";
+      lane.appendChild(atk);
+      document.getElementById("lane-caption").textContent =
+        "The first five seconds are the moderate episode. The rest of this chunk is free flow.";
+      const box = document.getElementById("moments");
+      match.segments.forEach((seg) => {
+        const btn = document.createElement("button");
+        btn.className = "seg";
+        btn.type = "button";
+        btn.innerHTML = "<strong>" + seg.t0.toFixed(1) + "–" + seg.t1.toFixed(1) +
+          "s</strong> · " + seg.events.join(", ") +
+          "<br>" + seg.note;
+        btn.addEventListener("click", () => {
+          video.currentTime = seg.t0;
+          video.play();
+        });
+        box.appendChild(btn);
+      });
+      const anomaly = match.anomaly;
+      document.getElementById("anomaly").textContent = anomaly.reason + " Visual embedding score is " + anomaly.s_emb + ".";
+      const moment = document.getElementById("moment");
+      moment.innerHTML = "<strong>Moment " + anomaly.moment_t.toFixed(1) + "s</strong><br>" + anomaly.moment_why;
+      moment.addEventListener("click", () => {
+        video.currentTime = anomaly.moment_t;
+        video.play();
+      });
+      const attack = match.attack;
+      const rows = [
+        ["Team", "I-24 episodes"],
+        ["Time", attack.t0 + "–" + attack.t1 + "s"],
+        ["Zone", "Highway"],
+        ["Events", attack.events.join(", ")],
+        ["Why", attack.why],
+      ];
+      const dl = document.getElementById("attack");
+      rows.forEach(([k, v]) => {
+        const dt = document.createElement("dt");
+        dt.textContent = k;
+        const dd = document.createElement("dd");
+        dd.textContent = v;
+        dl.appendChild(dt);
+        dl.appendChild(dd);
+      });
+    });
+    fetch("api/videos").then((r) => r.json()).then((catalog) => {
+      if (catalog.search_url) {
+        document.getElementById("all-videos").href = catalog.search_url;
+      }
+      const box = document.getElementById("catalog");
+      (catalog.videos || []).forEach((item) => {
+        const btn = document.createElement("button");
+        btn.className = "seg";
+        btn.type = "button";
+        btn.innerHTML = "<strong>" + item.filename + "</strong><br>" +
+          item.camera_id + " · " + item.duration_s + "s";
+        btn.addEventListener("click", () => {
+          video.src = "media/match?source=" + encodeURIComponent(item.source);
+          video.play();
+        });
+        box.appendChild(btn);
+      });
+    });
+    video.addEventListener("timeupdate", () => {
+      const t = video.currentTime || 0;
+      const m = Math.floor(t / 60);
+      const s = Math.floor(t % 60).toString().padStart(2, "0");
+      document.getElementById("clock").textContent = m + ":" + s;
+    });
+  </script>
+</body>
+</html>

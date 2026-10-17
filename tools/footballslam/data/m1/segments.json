@@ -1,0 +1,45 @@
+{
+  "match_id": "m1",
+  "segment_len_s": 5.0,
+  "parse_rate": 1.0,
+  "segments": [
+    {
+      "seg_id": "m1_h1_p01_0000",
+      "part_id": "m1_h1_p01",
+      "idx": 0,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261017_112414_45a57211_segment_002_of_003.mp4",
+      "possession": "A",
+      "direction": "L",
+      "zone": "A",
+      "events": [
+        "shot"
+      ],
+      "ball": true,
+      "n_players": 11,
+      "tempo": "F",
+      "note": "The ball is deflected by a defender before reaching the goalkeeper.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "m1_h1_p01_0001",
+      "part_id": "m1_h1_p01",
+      "idx": 1,
+      "t0": 10.0,
+      "t1": 11.83,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261017_112414_45a57211_segment_003_of_003.mp4",
+      "possession": "A",
+      "direction": "L",
+      "zone": "A",
+      "events": [
+        "shot"
+      ],
+      "ball": true,
+      "n_players": 10,
+      "tempo": "F",
+      "note": "The goalkeeper dives to his right to make a save.",
+      "parse_ok": true
+    }
+  ]
+}
