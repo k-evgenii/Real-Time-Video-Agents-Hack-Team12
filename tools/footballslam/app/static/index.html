@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traffic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p id="gate" class="gate" hidden>index not ready</p>
+  <header class="top" id="app">
+    <h1 id="sceneTitle">Traffic</h1>
+    <label>Scene <select id="sceneSelect"></select></label>
+    <label>Part <select id="partSelect"></select></label>
+    <label class="sim"><input id="simulate" type="checkbox"> Simulate</label>
+    <span id="clock" class="clock">00:00</span>
+  </header>
+  <main class="stage" id="stage">
+    <section class="video-panel">
+      <div class="panel-head">
+        <h2 id="segLabel">Segment</h2>
+      </div>
+      <div class="video-wrap" id="videoWrap">
+        <video id="video" controls playsinline></video>
+        <canvas id="overlay"></canvas>
+      </div>
+    </section>
+    <section class="flow-panel" id="flowPanel">
+      <div class="panel-head">
+        <h2>Flow map</h2>
+        <span id="simBadge" class="badge" hidden>simulated</span>
+      </div>
+      <canvas id="flow"></canvas>
+    </section>
+  </main>
+  <section class="bottom" id="bottom">
+    <div class="timeline-wrap">
+      <div class="lane-block">
+        <div class="lane-label" id="laneALabel">Episodes</div>
+        <div class="lane" id="laneA"></div>
+      </div>
+      <div class="lane-block">
+        <div class="lane-label" id="laneBLabel">Trajectories</div>
+        <div class="lane" id="laneB"></div>
+      </div>
+      <div class="axis" id="axis"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <aside class="side">
+      <div class="tabs" role="tablist">
+        <button type="button" id="tabEpisodes" role="tab" aria-selected="true">Episodes (Cosmos+Embed1)</button>
+        <button type="button" id="tabTracks" role="tab" aria-selected="false">Trajectories (Kalman)</button>
+      </div>
+      <div id="list" class="list"></div>
+      <div id="why" class="why"></div>
+    </aside>
+  </section>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

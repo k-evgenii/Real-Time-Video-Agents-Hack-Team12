@@ -1,198 +1,328 @@
-#!/usr/bin/env python3
-"""Traffic episode page for two I-24 chunks. The player shows chunk 0003."""
+"""FootballSLAM server.
 
-from __future__ import annotations
+Ingress strips /app, so every route is mounted at /. Data files are read from
+./data relative to the process working directory. Static files are the
+directory next to this module (app/static in the repo, /code/static once
+deploy materializes the ConfigMap beside main.py).
+"""
 
-import json
+import base64
+import logging
 import os
-import urllib.error
-import urllib.parse
-import urllib.request
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import re
+import threading
+from pathlib import Path
 
-HOST = "0.0.0.0"
-PORT = int(os.environ.get("PORT", "8080"))
+import requests
+from flask import Flask, Response, jsonify, request, send_from_directory
+
+log = logging.getLogger("footballslam")
+
 VSS_URL = os.environ.get("VSS_URL", "").rstrip("/")
 VSS_USERNAME = os.environ.get("VSS_USERNAME", "")
 VSS_PASSWORD = os.environ.get("VSS_PASSWORD", "")
+DATA_URL = os.environ.get("DATA_URL", "").rstrip("/")
+PORT = int(os.environ.get("PORT", "8080"))
 
-PARENT = "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4"
-SEARCH_URL = "https://team-12-vss.thecosmoslabs.com/search"
-ALLOWED_SOURCES = (
-    "s3://team-12-vss-chunks/team-12/",
-    "s3://team-12-vss-chunks-segments/segments/",
+DATA_DIR = Path.cwd() / "data"
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+ALLOWED_NAMES = frozenset(
+    {"segments", "attacks", "anomalies", "map", "track_alerts", "map_sim"}
 )
+MATCH_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
+STREAM_HEADERS = ("Content-Range", "Accept-Ranges", "Content-Type", "Content-Length")
+CHUNK = 64 * 1024
 
-CLIPS = {
-    "match_id": "i24",
-    "title": "I-24 overhead, chunk 0003",
-    "duration_s": 30.0,
-    "search_url": SEARCH_URL,
-    "banner": "Every indexed video is on the team search page. This player starts on I-24 chunk 0003. The first 5 seconds are the only moderate-flow episode. Nothing scored at or above 2.5, so nothing is flagged.",
-    "unparsed": {"t0": 0.0, "t1": 5.0, "why": "Moderate flow, 30.0–35.0s in the two-chunk timeline."},
-    "segments": [
-        {"seg_id": "i24_c3_0000", "t0": 0.0, "t1": 5.0, "events": ["none"], "note": "Moderate flow. Flow code is 1.7σ above this camera's other episodes, under the 2.5 flag line."},
-        {"seg_id": "i24_c3_0001", "t0": 5.0, "t1": 30.0, "events": ["none"], "note": "Free flow for the rest of this chunk. No risk events were stated in the captions."},
-    ],
-    "attack": {
-        "attack_id": "i24_e003",
-        "team": "A",
-        "t0": 5.0,
-        "t1": 30.0,
-        "n_seg": 5,
-        "zones": ["H"],
-        "events": ["none"],
-        "ended_by": "end",
-        "why": "After the 5-second moderate spell, this chunk is free flow through 30 seconds. That is the usual state for this camera.",
-    },
-    "anomaly": {
-        "s_emb": None,
-        "flagged": False,
-        "reason": "Closest episode scores 1.75, below 2.5. Visual embedding score is not loaded.",
-        "moment_t": 0.0,
-        "moment_why": "Moderate flow on an otherwise free highway. No braking or stop was stated.",
-    },
-}
-
-_token = ""
+app = Flask(__name__, static_folder=None)
+_token = None
+_token_lock = threading.Lock()
+_thread_local = threading.local()
 
 
-def vss_token() -> str:
+def _http():
+    """One Session per thread so concurrent Range streams do not share a socket."""
+    session = getattr(_thread_local, "session", None)
+    if session is None:
+        session = requests.Session()
+        _thread_local.session = session
+    return session
+
+
+def login():
+    """Fetch a JWT and keep it in memory. Never log the token or password."""
     global _token
-    if _token:
-        return _token
-    body = json.dumps({"username": VSS_USERNAME, "password": VSS_PASSWORD}).encode()
-    req = urllib.request.Request(
-        f"{VSS_URL}/api/v1/auth/login",
-        data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        _token = json.load(resp)["access_token"]
-    return _token
-
-
-class Handler(BaseHTTPRequestHandler):
-    protocol_version = "HTTP/1.1"
-
-    def log_message(self, fmt: str, *args) -> None:
-        path = self.path.split("?", 1)[0]
-        status = args[1] if len(args) > 1 else args
-        print(f"{self.command} {path} -> {status}")
-
-    def _send(self, code: int, body: bytes, content_type: str) -> None:
-        self.send_response(code)
-        self.send_header("Content-Type", content_type)
-        self.send_header("Content-Length", str(len(body)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        if self.command != "HEAD":
-            self.wfile.write(body)
-
-    def do_HEAD(self) -> None:
-        self.do_GET()
-
-    def do_GET(self) -> None:
-        path = urllib.parse.urlparse(self.path).path
-        if path == "/health":
-            self._send(200, b'{"ok":true,"service":"footballslam"}', "application/json")
-            return
-        if path == "/api/match":
-            self._send(200, json.dumps(CLIPS).encode(), "application/json")
-            return
-        if path == "/api/videos":
-            self._videos()
-            return
-        if path == "/media/match":
-            self._stream()
-            return
-        if path in ("/", "/index.html"):
-            root = os.path.dirname(__file__)
-            html = os.path.join(root, "static", "index.html")
-            if not os.path.exists(html):
-                html = os.path.join(root, "index.html")
-            self._send(200, open(html, "rb").read(), "text/html; charset=utf-8")
-            return
-        self._send(404, b'{"error":"not found"}', "application/json")
-
-    def _videos(self) -> None:
-        query = urllib.parse.urlencode({"scope": "all", "limit": "30", "offset": "0", "location": "nashville"})
-        req = urllib.request.Request(
-            f"{VSS_URL}/api/v1/videos/explore?{query}",
-            headers={"Authorization": "Bearer " + vss_token()},
+    if not VSS_URL or not VSS_USERNAME or not VSS_PASSWORD:
+        raise RuntimeError("vss credentials are not configured")
+    try:
+        resp = _http().post(
+            f"{VSS_URL}/api/v1/auth/login",
+            json={"username": VSS_USERNAME, "password": VSS_PASSWORD},
+            timeout=15,
         )
+    except requests.RequestException:
+        raise RuntimeError("login failed")
+    try:
+        if resp.status_code != 200:
+            raise RuntimeError("login failed")
         try:
-            with urllib.request.urlopen(req, timeout=40) as resp:
-                payload = json.load(resp)
-        except urllib.error.HTTPError as exc:
-            self._send(exc.code, b'{"error":"catalog failed"}', "application/json")
-            return
-        rows = []
-        for chunk in payload.get("chunks") or []:
-            source = chunk.get("original_video") or ""
-            if not source.startswith(ALLOWED_SOURCES):
-                continue
-            rows.append({
-                "filename": chunk.get("filename") or "",
-                "camera_id": chunk.get("camera_id") or "",
-                "duration_s": chunk.get("chunk_duration_sec"),
-                "source": source,
-            })
-        body = json.dumps({"search_url": SEARCH_URL, "total": payload.get("total"), "videos": rows}).encode()
-        self._send(200, body, "application/json")
+            body = resp.json()
+        except ValueError:
+            body = None
+        token = body.get("access_token") if isinstance(body, dict) else None
+        if not isinstance(token, str) or not token:
+            raise RuntimeError("login failed")
+    finally:
+        resp.close()
+    with _token_lock:
+        _token = token
 
-    def _stream(self) -> None:
-        global _token
-        parsed = urllib.parse.urlparse(self.path)
-        asked = urllib.parse.parse_qs(parsed.query).get("source", [PARENT])[0]
-        source = asked if asked.startswith(ALLOWED_SOURCES) else PARENT
-        for attempt in (1, 2):
-            token = vss_token()
-            query = urllib.parse.urlencode({"source": source, "token": token})
-            req = urllib.request.Request(f"{VSS_URL}/api/v1/videos/stream?{query}")
-            if self.headers.get("Range"):
-                req.add_header("Range", self.headers["Range"])
-            try:
-                upstream = urllib.request.urlopen(req, timeout=60)
-                status = upstream.status
+
+def _current_token():
+    with _token_lock:
+        return _token
+
+
+def _json_error(message, status):
+    return jsonify(error=message), status
+
+
+def _valid_match(match):
+    return bool(MATCH_ID.fullmatch(match))
+
+
+def _decode_src(src):
+    padded = src.strip()
+    padded += "=" * ((-len(padded)) % 4)
+    try:
+        raw = base64.urlsafe_b64decode(padded.encode("ascii"))
+        uri = raw.decode("utf-8").strip()
+    except (ValueError, UnicodeDecodeError):
+        return None
+    if not uri.startswith("s3://") or not uri[5:]:
+        return None
+    return uri
+
+
+def _iter_upstream(upstream):
+    try:
+        while True:
+            chunk = upstream.raw.read(CHUNK)
+            if not chunk:
                 break
-            except urllib.error.HTTPError as exc:
-                if exc.code == 401 and attempt == 1:
-                    _token = ""
-                    continue
-                self._send(exc.code, b'{"error":"playback failed"}', "application/json")
-                return
-        else:
-            self._send(502, b'{"error":"playback failed"}', "application/json")
-            return
-        self.send_response(status)
-        content_type = upstream.headers.get("Content-Type") or ""
-        if not content_type or "octet-stream" in content_type:
-            content_type = "video/mp4"
-        self.send_header("Content-Type", content_type)
-        for header in ("Content-Length", "Content-Range", "Accept-Ranges"):
-            value = upstream.headers.get(header)
-            if value:
-                self.send_header(header, value)
-        self.end_headers()
-        if self.command == "HEAD":
-            upstream.close()
-            return
+            yield chunk
+    finally:
+        upstream.close()
+
+
+def _proxy_video(uri, allow_relogin):
+    token = _current_token()
+    if not token:
         try:
-            while True:
-                chunk = upstream.read(65536)
-                if not chunk:
-                    break
-                self.wfile.write(chunk)
-        except (BrokenPipeError, ConnectionResetError):
-            pass
-        finally:
+            login()
+        except RuntimeError:
+            log.warning("video proxy login failed")
+            return _json_error("upstream auth failed", 502)
+        token = _current_token()
+        if not token:
+            return _json_error("upstream auth failed", 502)
+
+    headers = {}
+    range_header = request.headers.get("Range")
+    if range_header:
+        headers["Range"] = range_header
+
+    try:
+        upstream = _http().get(
+            f"{VSS_URL}/api/v1/videos/stream",
+            params={"source": uri, "token": token},
+            headers=headers,
+            stream=True,
+            timeout=(10, 300),
+        )
+    except requests.RequestException:
+        log.warning("video upstream request failed")
+        return _json_error("upstream unavailable", 502)
+
+    # Do not log upstream.url: it carries the JWT.
+    if upstream.status_code == 401 and allow_relogin:
+        upstream.close()
+        try:
+            login()
+        except RuntimeError:
+            log.warning("video proxy re-login failed")
+            return _json_error("upstream auth failed", 502)
+        return _proxy_video(uri, allow_relogin=False)
+
+    if upstream.status_code not in (200, 206):
+        status = upstream.status_code
+        upstream.close()
+        if status == 404:
+            return _json_error("not found", 404)
+        return _json_error("upstream error", status)
+
+    upstream.raw.decode_content = False
+    passthrough = {}
+    for name in STREAM_HEADERS:
+        value = upstream.headers.get(name)
+        if value:
+            passthrough[name] = value
+    ctype = passthrough.get("Content-Type", "")
+    ctype_base = ctype.split(";")[0].strip().lower()
+    if ctype_base in ("", "application/octet-stream", "binary/octet-stream"):
+        if str(uri).lower().split("?", 1)[0].endswith(".mp4"):
+            passthrough["Content-Type"] = "video/mp4"
+
+    return Response(
+        _iter_upstream(upstream),
+        status=upstream.status_code,
+        headers=passthrough,
+        direct_passthrough=True,
+    )
+
+
+@app.get("/health")
+def health():
+    return jsonify(status="ok")
+
+
+@app.get("/matches")
+def matches():
+    index_path = DATA_DIR / "index.json"
+    if not index_path.is_file():
+        return _json_error("index not found", 404)
+    return send_from_directory(DATA_DIR, "index.json")
+
+
+@app.get("/data/<match>/<name>.json")
+def match_data(match, name):
+    if name not in ALLOWED_NAMES or not _valid_match(match):
+        return _json_error("not found", 404)
+    if DATA_URL:
+        return _fetch_remote_json(match, name)
+    filename = f"{name}.json"
+    path = DATA_DIR / match / filename
+    if not path.is_file():
+        return _json_error("not found", 404)
+    return send_from_directory(DATA_DIR / match, filename)
+
+
+def _fetch_remote_json(match, name):
+    url = f"{DATA_URL}/{match}/{name}.json"
+    try:
+        upstream = _http().get(url, stream=True, timeout=(10, 60))
+    except requests.RequestException:
+        log.warning("data fetch failed")
+        return _json_error("upstream unavailable", 502)
+    if upstream.status_code == 404:
+        upstream.close()
+        return _json_error("not found", 404)
+    if upstream.status_code != 200:
+        upstream.close()
+        return _json_error("upstream error", 502)
+    upstream.raw.decode_content = True
+    return Response(
+        _iter_upstream(upstream),
+        status=200,
+        mimetype="application/json",
+    )
+
+
+@app.get("/video")
+def video():
+    src = request.args.get("src", "")
+    if not src:
+        return _json_error("missing src", 400)
+    uri = _decode_src(src)
+    if uri is None:
+        return _json_error("bad src", 400)
+    if not VSS_URL:
+        return _json_error("upstream unavailable", 502)
+    return _proxy_video(uri, allow_relogin=True)
+
+
+def _search(query, camera_id, allow_relogin):
+    """POST /api/v1/search. Never put the JWT in the response body or logs."""
+    token = _current_token()
+    if not token:
+        try:
+            login()
+        except RuntimeError:
+            log.warning("search login failed")
+            return _json_error("upstream auth failed", 502)
+        token = _current_token()
+        if not token:
+            return _json_error("upstream auth failed", 502)
+
+    body = {"query": query, "top_k": 6, "min_similarity": 0.3}
+    if camera_id:
+        body["metadata_filters"] = {"camera_id": camera_id}
+
+    try:
+        upstream = _http().post(
+            f"{VSS_URL}/api/v1/search",
+            json=body,
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=(10, 60),
+        )
+    except requests.RequestException:
+        log.warning("search upstream request failed")
+        return _json_error("upstream unavailable", 502)
+
+    try:
+        if upstream.status_code == 401 and allow_relogin:
             upstream.close()
+            try:
+                login()
+            except RuntimeError:
+                log.warning("search re-login failed")
+                return _json_error("upstream auth failed", 502)
+            return _search(query, camera_id, allow_relogin=False)
+
+        if upstream.status_code != 200:
+            log.warning("search upstream status %s", upstream.status_code)
+            return _json_error("upstream error", 502)
+
+        try:
+            payload = upstream.json()
+        except ValueError:
+            return _json_error("upstream error", 502)
+        return jsonify(payload)
+    finally:
+        upstream.close()
 
 
-def main() -> None:
-    ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
+@app.get("/similar")
+def similar():
+    query = request.args.get("q", "").strip()
+    if not query:
+        return _json_error("missing q", 400)
+    camera_id = request.args.get("camera_id", "").strip()
+    if not VSS_URL:
+        return _json_error("upstream unavailable", 502)
+    return _search(query, camera_id, allow_relogin=True)
+
+
+@app.get("/")
+def index_page():
+    return send_from_directory(STATIC_DIR, "index.html")
+
+
+@app.get("/<path:filename>")
+def static_files(filename):
+    return send_from_directory(STATIC_DIR, filename)
+
+
+def main():
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    # Upstream URLs contain the JWT. Keep HTTP client logs off.
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    logging.getLogger("requests").setLevel(logging.WARNING)
+    try:
+        login()
+        log.info("logged in to vss")
+    except RuntimeError:
+        log.warning("startup login failed; video will retry on request")
+    app.run(host="0.0.0.0", port=PORT, threaded=True, use_reloader=False)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1213 @@
+{
+  "match_id": "i24_cam-1",
+  "segments": [
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 0,
+      "t0": 0.0,
+      "t1": 8.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 1,
+      "t0": 8.0,
+      "t1": 16.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 2,
+      "t0": 16.0,
+      "t1": 24.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 3,
+      "t0": 24.0,
+      "t1": 32.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 4,
+      "t0": 32.0,
+      "t1": 40.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 5,
+      "t0": 40.0,
+      "t1": 48.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 6,
+      "t0": 48.0,
+      "t1": 56.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 7,
+      "t0": 56.0,
+      "t1": 64.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 8,
+      "t0": 64.0,
+      "t1": 72.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 9,
+      "t0": 72.0,
+      "t1": 80.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 10,
+      "t0": 80.0,
+      "t1": 88.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 11,
+      "t0": 88.0,
+      "t1": 96.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 12,
+      "t0": 96.0,
+      "t1": 104.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "cyclist"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 13,
+      "t0": 104.0,
+      "t1": 112.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 14,
+      "t0": 112.0,
+      "t1": 120.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 15,
+      "t0": 120.0,
+      "t1": 128.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 16,
+      "t0": 128.0,
+      "t1": 136.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 17,
+      "t0": 136.0,
+      "t1": 144.0,
+      "flow": "U",
+      "direction": "U",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 18,
+      "t0": 144.0,
+      "t1": 152.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 19,
+      "t0": 152.0,
+      "t1": 160.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 20,
+      "t0": 160.0,
+      "t1": 168.0,
+      "flow": "F",
+      "direction": "L",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 21,
+      "t0": 168.0,
+      "t1": 176.0,
+      "flow": "F",
+      "direction": "L",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 22,
+      "t0": 176.0,
+      "t1": 184.0,
+      "flow": "F",
+      "direction": "L",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 23,
+      "t0": 184.0,
+      "t1": 192.0,
+      "flow": "F",
+      "direction": "L",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 24,
+      "t0": 192.0,
+      "t1": 200.0,
+      "flow": "F",
+      "direction": "L",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 25,
+      "t0": 200.0,
+      "t1": 208.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "R",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 26,
+      "t0": 208.0,
+      "t1": 216.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "R",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 27,
+      "t0": 216.0,
+      "t1": 224.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "R",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 28,
+      "t0": 224.0,
+      "t1": 232.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "R",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 29,
+      "t0": 232.0,
+      "t1": 240.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "R",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 30,
+      "t0": 240.0,
+      "t1": 248.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 31,
+      "t0": 248.0,
+      "t1": 256.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "debris"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 32,
+      "t0": 256.0,
+      "t1": 264.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 33,
+      "t0": 264.0,
+      "t1": 272.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 11,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 34,
+      "t0": 272.0,
+      "t1": 280.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 35,
+      "t0": 280.0,
+      "t1": 288.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 36,
+      "t0": 288.0,
+      "t1": 296.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 37,
+      "t0": 296.0,
+      "t1": 304.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 38,
+      "t0": 304.0,
+      "t1": 312.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 39,
+      "t0": 312.0,
+      "t1": 320.0,
+      "flow": "M",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 40,
+      "t0": 320.0,
+      "t1": 328.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 13,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 41,
+      "t0": 328.0,
+      "t1": 336.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 42,
+      "t0": 336.0,
+      "t1": 344.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 43,
+      "t0": 344.0,
+      "t1": 352.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "parking"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 44,
+      "t0": 352.0,
+      "t1": 360.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 45,
+      "t0": 360.0,
+      "t1": 368.0,
+      "flow": "S",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 50,
+      "n_peds": 6,
+      "light": "D",
+      "events": [
+        "stopped_vehicle"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 46,
+      "t0": 368.0,
+      "t1": 376.0,
+      "flow": "S",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 48,
+      "n_peds": 7,
+      "light": "D",
+      "events": [
+        "stopped_vehicle"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 47,
+      "t0": 376.0,
+      "t1": 384.0,
+      "flow": "S",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 52,
+      "n_peds": 8,
+      "light": "D",
+      "events": [
+        "parking"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 48,
+      "t0": 384.0,
+      "t1": 392.0,
+      "flow": "S",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 47,
+      "n_peds": 5,
+      "light": "D",
+      "events": [
+        "debris"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 49,
+      "t0": 392.0,
+      "t1": 400.0,
+      "flow": "S",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 49,
+      "n_peds": 9,
+      "light": "D",
+      "events": [
+        "hard_braking",
+        "collision",
+        "near_miss"
+      ],
+      "note": "queue collapse after a hard brake",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 50,
+      "t0": 400.0,
+      "t1": 408.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 13,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 51,
+      "t0": 408.0,
+      "t1": 416.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 13,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "tailgating"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 52,
+      "t0": 416.0,
+      "t1": 424.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 53,
+      "t0": 424.0,
+      "t1": 432.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 12,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 54,
+      "t0": 432.0,
+      "t1": 440.0,
+      "flow": "F",
+      "direction": "R",
+      "scene": "H",
+      "n_vehicles": 14,
+      "n_peds": 0,
+      "light": "D",
+      "events": [
+        "none"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 55,
+      "t0": 440.0,
+      "t1": 448.0,
+      "flow": "D",
+      "direction": "X",
+      "scene": "H",
+      "n_vehicles": 26,
+      "n_peds": 11,
+      "light": "D",
+      "events": [
+        "lane_change",
+        "overtaking"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 56,
+      "t0": 448.0,
+      "t1": 456.0,
+      "flow": "D",
+      "direction": "X",
+      "scene": "H",
+      "n_vehicles": 28,
+      "n_peds": 12,
+      "light": "D",
+      "events": [
+        "u_turn",
+        "turning"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 57,
+      "t0": 456.0,
+      "t1": 464.0,
+      "flow": "D",
+      "direction": "X",
+      "scene": "H",
+      "n_vehicles": 24,
+      "n_peds": 10,
+      "light": "D",
+      "events": [
+        "lane_change",
+        "turning"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 58,
+      "t0": 464.0,
+      "t1": 472.0,
+      "flow": "D",
+      "direction": "X",
+      "scene": "H",
+      "n_vehicles": 30,
+      "n_peds": 14,
+      "light": "D",
+      "events": [
+        "overtaking",
+        "cyclist"
+      ],
+      "note": "",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    },
+    {
+      "match_id": "i24_cam-1",
+      "part": 0,
+      "seg_idx": 59,
+      "t0": 472.0,
+      "t1": 480.0,
+      "flow": "D",
+      "direction": "X",
+      "scene": "H",
+      "n_vehicles": 27,
+      "n_peds": 13,
+      "light": "D",
+      "events": [
+        "wrong_way",
+        "pedestrian_in_road",
+        "u_turn"
+      ],
+      "note": "vehicle turns across dense lanes",
+      "source": "s3://fixture/pending",
+      "original_video": "s3://fixture/pending",
+      "parse_ok": true
+    }
+  ]
+}
