@@ -1,0 +1,46 @@
+[
+  {
+    "track_id": 4,
+    "t0": 80,
+    "t1": 88,
+    "type": "hard_braking",
+    "peak_d2": 18.4,
+    "peak_score": 1.6,
+    "u": 3,
+    "v": 2,
+    "tau": 11.2,
+    "d2_hist": [
+      4.2,
+      7.1,
+      11.4,
+      15.6,
+      18.4,
+      16.2,
+      11.0,
+      7.4
+    ],
+    "reason": "d\u00b2=18.4 vs \u03c4=11.2 for 8 frames; speed ratio 0.31 \u2192 hard braking"
+  },
+  {
+    "track_id": 11,
+    "t0": 200,
+    "t1": 208,
+    "type": "swerve",
+    "peak_d2": 16.8,
+    "peak_score": 1.85,
+    "u": 5,
+    "v": 4,
+    "tau": 11.2,
+    "d2_hist": [
+      3.4,
+      6.2,
+      10.8,
+      14.1,
+      16.8,
+      15.0,
+      9.6,
+      6.1
+    ],
+    "reason": "d\u00b2=16.8 vs \u03c4=11.2 for 8 frames; heading change 74\u00b0 \u2192 swerve"
+  }
+]

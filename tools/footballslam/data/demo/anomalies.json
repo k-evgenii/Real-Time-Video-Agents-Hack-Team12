@@ -1,0 +1,523 @@
+{
+  "match_id": "i24_cam-1",
+  "feature_names": [
+    "duration_s",
+    "n_seg",
+    "mean_vehicles",
+    "max_vehicles",
+    "mean_peds",
+    "n_risk_events",
+    "n_manoeuvres",
+    "share_dense_or_stopped",
+    "flow_code",
+    "ended_by_code"
+  ],
+  "per_team": {
+    "A": [
+      {
+        "attack_id": "ep-12",
+        "rank": 1,
+        "s_feat": 16.526,
+        "s_emb": null,
+        "flagged": true,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          27.0,
+          30,
+          12.0,
+          2,
+          8,
+          1.0,
+          2,
+          1
+        ],
+        "z": [
+          0.0,
+          0.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          2.023,
+          5.0
+        ],
+        "reasons": [
+          "mean vehicles 5.0\u03c3 above camera median (27.0 vs 12.1 vehicles)",
+          "max vehicles 5.0\u03c3 above camera median (30 vs 14.0 vehicles)",
+          "mean pedestrians 5.0\u03c3 above camera median (12.0 vs 0.0 pedestrians)"
+        ],
+        "moment": {
+          "t": 472.0,
+          "seg_idx": 59,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-10",
+        "rank": 2,
+        "s_feat": 15.79,
+        "s_emb": null,
+        "flagged": true,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          49.2,
+          52,
+          7.0,
+          3,
+          0,
+          1.0,
+          3,
+          1
+        ],
+        "z": [
+          0.0,
+          0.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          0.0,
+          5.0,
+          3.372,
+          5.0
+        ],
+        "reasons": [
+          "mean vehicles 5.0\u03c3 above camera median (49.2 vs 12.1 vehicles)",
+          "max vehicles 5.0\u03c3 above camera median (52 vs 14.0 vehicles)",
+          "mean pedestrians 5.0\u03c3 above camera median (7.0 vs 0.0 pedestrians)"
+        ],
+        "moment": {
+          "t": 392.0,
+          "seg_idx": 49,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-02",
+        "rank": 3,
+        "s_feat": 1.529,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          11.2,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          1,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -1.012,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.674,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 1.0\u03c3 below camera median (11.2 vs 12.1 vehicles)",
+          "flow code 0.7\u03c3 above camera median (1 vs 0.5 code)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 40.0,
+          "seg_idx": 5,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-01",
+        "rank": 4,
+        "s_feat": 1.412,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          11.0,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -1.237,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 1.2\u03c3 below camera median (11.0 vs 12.1 vehicles)",
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 0.0,
+          "seg_idx": 0,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-08",
+        "rank": 5,
+        "s_feat": 1.294,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          12.4,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          1,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.337,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 above camera median (1 vs 0.5 code)",
+          "mean vehicles 0.3\u03c3 above camera median (12.4 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 280.0,
+          "seg_idx": 35,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-11",
+        "rank": 6,
+        "s_feat": 1.059,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          12.8,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.787,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 0.8\u03c3 above camera median (12.8 vs 12.1 vehicles)",
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 408.0,
+          "seg_idx": 51,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-03",
+        "rank": 7,
+        "s_feat": 0.941,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          11.4,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -0.787,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 0.8\u03c3 below camera median (11.4 vs 12.1 vehicles)",
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 96.0,
+          "seg_idx": 12,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-05",
+        "rank": 8,
+        "s_feat": 0.941,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          11.8,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -0.337,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "mean vehicles 0.3\u03c3 below camera median (11.8 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 160.0,
+          "seg_idx": 20,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-04",
+        "rank": 9,
+        "s_feat": 0.824,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          11.8,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          1,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -0.337,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 above camera median (1 vs 0.5 code)",
+          "mean vehicles 0.3\u03c3 below camera median (11.8 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 120.0,
+          "seg_idx": 15,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-06",
+        "rank": 10,
+        "s_feat": 0.824,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          12.0,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          1,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          -0.112,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 above camera median (1 vs 0.5 code)",
+          "mean vehicles 0.1\u03c3 below camera median (12.0 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 200.0,
+          "seg_idx": 25,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-07",
+        "rank": 11,
+        "s_feat": 0.824,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          12.2,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "mean vehicles 0.1\u03c3 above camera median (12.2 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 248.0,
+          "seg_idx": 31,
+          "source": "s3://fixture/pending"
+        }
+      },
+      {
+        "attack_id": "ep-09",
+        "rank": 12,
+        "s_feat": 0.824,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "features": [
+          40.0,
+          5,
+          12.6,
+          14,
+          0.0,
+          0,
+          0,
+          0.0,
+          0,
+          0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.562,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          0.0
+        ],
+        "reasons": [
+          "flow code 0.7\u03c3 below camera median (0 vs 0.5 code)",
+          "mean vehicles 0.6\u03c3 above camera median (12.6 vs 12.1 vehicles)",
+          "duration 0.0\u03c3 above camera median (40.0 vs 40.0 s)"
+        ],
+        "moment": {
+          "t": 344.0,
+          "seg_idx": 43,
+          "source": "s3://fixture/pending"
+        }
+      }
+    ]
+  }
+}
