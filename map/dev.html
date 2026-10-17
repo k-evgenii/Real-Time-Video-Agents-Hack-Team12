@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- Role B test page. Serve tools/footballslam/ (python -m http.server 8090) and open
+     http://localhost:8090/map/dev.html?map=dev_fixture.json[&video=<mp4 url>][&mode=RELATIVE]
+     map= is relative to map/ (e.g. ../data/demo/map.json or ../data/m1/map.json). -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>FootballSLAM map dev</title>
+<style>
+  body { margin: 0; background: #0d1117; color: #e6edf3; font: 16px system-ui, sans-serif; }
+  #wrap { display: grid; grid-template-columns: 60% 40%; height: 100vh; }
+  #wrap > div { min-width: 0; overflow: hidden; }
+  #vbox { position: relative; background: #000; }
+  video, #vcanvas, #blank { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  #pitch { width: 100%; height: 60vh; display: block; }
+  #fps { position: fixed; top: 8px; right: 12px; background: rgba(0,0,0,.6); padding: 4px 10px; border-radius: 6px; font-weight: bold; }
+  #info { padding: 10px; font-size: 15px; }
+  #err { color: #ff7b72; padding: 10px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="vbox"><canvas id="blank"></canvas><video id="video" muted playsinline controls></video><canvas id="vcanvas"></canvas></div>
+  <div><canvas id="pitch"></canvas><div id="info"></div><div id="err"></div></div>
+</div>
+<div id="fps">– fps</div>
+<script type="module">
+import { drawPitch, findFrame, buildTrails } from '../app/static/pitch.js';
+import { drawOverlay } from '../app/static/overlay.js';
+
+const q = new URLSearchParams(location.search);
+const teams = { A: q.get('a') || '#2f6df6', B: q.get('b') || '#e8e8e8' };
+const video = document.getElementById('video');
+const vcanvas = document.getElementById('vcanvas');
+const pitch = document.getElementById('pitch');
+const info = document.getElementById('info');
+window.addEventListener('error', (e) => { document.getElementById('err').textContent = String(e.message); });
+
+const map = await (await fetch(q.get('map') || 'dev_fixture.json')).json();
+const mode = q.get('mode') || map.mode;
+const t0 = map.frames.length ? map.frames[0].t : 0;
+const tEnd = map.frames.length ? map.frames[map.frames.length - 1].t : 0;
+const useVideo = !!q.get('video');
+if (useVideo) { video.src = q.get('video'); video.play().catch(() => {}); }
+else {
+  // hidden stand-in sized like the source frame so the overlay letterboxing is exercised
+  video.style.visibility = 'hidden';
+  Object.defineProperty(video, 'videoWidth', { get: () => (map.image_size || [1920, 1080])[0] });
+  Object.defineProperty(video, 'videoHeight', { get: () => (map.image_size || [1920, 1080])[1] });
+}
+const start = performance.now();
+let frames = 0, last = performance.now();
+
+function loop(now) {
+  const t = useVideo ? t0 + video.currentTime : t0 + ((now - start) / 1000) % Math.max(0.001, tEnd - t0);
+  const i = findFrame(map.frames, t);
+  const fr = i >= 0 ? map.frames[i] : null;
+  drawPitch(pitch, fr, { teams, trails: buildTrails(map.frames, i, 2), mode });
+  drawOverlay(vcanvas, fr, video, { teams, showIds: true, imageSize: map.image_size });
+  frames++;
+  if (now - last > 500) {
+    document.getElementById('fps').textContent = `${Math.round(frames * 1000 / (now - last))} fps`;
+    frames = 0; last = now;
+    info.textContent = `mode=${mode}  t=${t.toFixed(1)}s  frame ${i}/${map.frames.length}  players=${fr ? fr.p.length : 0}  ball=${fr && fr.b ? (fr.b[5] ? 'interp' : 'det') : 'none'}`;
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
