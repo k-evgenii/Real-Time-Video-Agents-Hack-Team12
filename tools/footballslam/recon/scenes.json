@@ -1,0 +1,400 @@
+{
+  "scenes": [
+    {
+      "camera_id": "i24_cam-1",
+      "map_mode": "FLOW",
+      "parts": [
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_055249_scene1_p1c1_chunk_0000.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055249_scene1_p1c1_chunk_0000_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_055340_scene1_p1c1_chunk_0002.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_055340_scene1_p1c1_chunk_0002_segment_006_of_006.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "camera_id": "neighborhood_cam-1",
+      "map_mode": "FLOW",
+      "parts": [
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_072331_neighborhood_20260901_chunk_0000.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072331_neighborhood_20260901_chunk_0000_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_072421_neighborhood_20260901_chunk_0002.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072421_neighborhood_20260901_chunk_0002_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_072603_neighborhood_20260901_chunk_0006_segment_006_of_006.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "camera_id": "pie_cam-3",
+      "map_mode": "NONE",
+      "parts": [
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_060529_set01_video_chunk_0000.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060529_set01_video_chunk_0000_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_060554_set01_video_chunk_0001.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060554_set01_video_chunk_0001_segment_006_of_006.mp4"
+            }
+          ]
+        },
+        {
+          "original_video": "s3://team-12-vss-chunks/team-12/20261001_060620_set01_video_chunk_0002.mp4",
+          "duration_s": 30.0,
+          "segments": [
+            {
+              "idx": 0,
+              "t0": 0.0,
+              "t1": 5.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_001_of_006.mp4"
+            },
+            {
+              "idx": 1,
+              "t0": 5.0,
+              "t1": 10.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_002_of_006.mp4"
+            },
+            {
+              "idx": 2,
+              "t0": 10.0,
+              "t1": 15.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_003_of_006.mp4"
+            },
+            {
+              "idx": 3,
+              "t0": 15.0,
+              "t1": 20.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_004_of_006.mp4"
+            },
+            {
+              "idx": 4,
+              "t0": 20.0,
+              "t1": 25.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_005_of_006.mp4"
+            },
+            {
+              "idx": 5,
+              "t0": 25.0,
+              "t1": 30.0,
+              "source": "s3://team-12-vss-chunks-segments/segments/20261001_060620_set01_video_chunk_0002_segment_006_of_006.mp4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

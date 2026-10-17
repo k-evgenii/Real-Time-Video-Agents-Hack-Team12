@@ -1,0 +1,6 @@
+{
+  "source": "s3://team-12-vss-chunks-segments/segments/20261008_075622_GX050001_chunk_0023_segment_005_of_005.mp4",
+  "original_video": "s3://team-12-vss-chunks/team-12/20261008_075622_GX050001_chunk_0023.mp4",
+  "segment_stream_ok": false,
+  "parent_stream_ok": false
+}

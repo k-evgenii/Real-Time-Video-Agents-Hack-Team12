@@ -1,0 +1,212 @@
+{
+  "match_id": "i24_cam-1",
+  "attacks": [
+    {
+      "attack_id": "ep-01",
+      "team": "A",
+      "flow": "F",
+      "t0": 0.0,
+      "t1": 40.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-02",
+      "team": "A",
+      "flow": "M",
+      "t0": 40.0,
+      "t1": 80.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-03",
+      "team": "A",
+      "flow": "F",
+      "t0": 80.0,
+      "t1": 120.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none",
+        "cyclist"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-04",
+      "team": "A",
+      "flow": "M",
+      "t0": 120.0,
+      "t1": 160.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-05",
+      "team": "A",
+      "flow": "F",
+      "t0": 160.0,
+      "t1": 200.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-06",
+      "team": "A",
+      "flow": "M",
+      "t0": 200.0,
+      "t1": 240.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-07",
+      "team": "A",
+      "flow": "F",
+      "t0": 240.0,
+      "t1": 280.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none",
+        "debris"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-08",
+      "team": "A",
+      "flow": "M",
+      "t0": 280.0,
+      "t1": 320.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-09",
+      "team": "A",
+      "flow": "F",
+      "t0": 320.0,
+      "t1": 360.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none",
+        "parking"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-10",
+      "team": "A",
+      "flow": "S",
+      "t0": 360.0,
+      "t1": 400.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "stopped_vehicle",
+        "parking",
+        "debris",
+        "hard_braking",
+        "collision",
+        "near_miss"
+      ],
+      "ended_by": "risk_event"
+    },
+    {
+      "attack_id": "ep-11",
+      "team": "A",
+      "flow": "F",
+      "t0": 400.0,
+      "t1": 440.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "none",
+        "tailgating"
+      ],
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "ep-12",
+      "team": "A",
+      "flow": "D",
+      "t0": 440.0,
+      "t1": 480.0,
+      "n_seg": 5,
+      "part": 0,
+      "scenes": [
+        "H"
+      ],
+      "events": [
+        "lane_change",
+        "overtaking",
+        "u_turn",
+        "turning",
+        "cyclist",
+        "wrong_way",
+        "pedestrian_in_road"
+      ],
+      "ended_by": "risk_event"
+    }
+  ]
+}
