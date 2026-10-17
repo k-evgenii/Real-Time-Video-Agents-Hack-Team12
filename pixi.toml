@@ -1,0 +1,13 @@
+[workspace]
+authors = ["k-evgenii <k0nd0r.a1.0ne@gmail.com>"]
+channels = ["conda-forge"]
+name = "Real-Time-Video-Agents-Hack-Team12"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+pytest = ">=9.1.1,<10"
+ruff = ">=0.17.1,<0.18"
