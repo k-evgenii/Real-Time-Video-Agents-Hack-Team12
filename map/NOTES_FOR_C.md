@@ -6,6 +6,9 @@ Files (scene `i24_cam-1`, 3 parent chunks, match-global t = chunk_index*30 + sec
 - `data/i24_cam-1/map_sim.json` = same part with an injected swerve on track 85 at t≈10.4 s; top-level `"simulated": true`,
   every alert has `"simulated": true`. Show a "SIMULATED" label when the toggle is on.
 - `data/i24_cam-1/track_alerts.json` = `{"scene","tau":{part:τ},"alerts":[…]}` sorted by `peak_score` (real alerts only).
+- `data/neighborhood_cam-1/map.json` = `20261001_072331_neighborhood_20260901_chunk_0000` (t 0–30), plus
+  `map_20261001_072356_neighborhood_20260901_chunk_0001.json` (t 30–60); 20 fps, 2048×1154, τ = 9.21, 0 alerts
+  (quiet night street — the "thresholds re-learn per camera" scene). `track_alerts.json` there has an empty list.
 
 map.json (FLOW): `p` row = `[id, cls(0 vehicle,1 person/bicycle,2 other), x_dm, y_dm, u, v, w, h, score_x100]`, `(u,v)` = box
 CENTRE in source pixels; `b` always null. Top level: `image_size [W,H]`, `tau`, `flow {cols,rows,cells:[[ux,uy,n,mean_speed_px_s]]}`
