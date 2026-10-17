@@ -83,7 +83,8 @@ function drawFlow(canvas, ctx, g, frame, opts) {
   const { k, ox, oy, dpr } = g;
   const X = (x) => ox + x * k, Y = (y) => oy + y * k;
   const [iw, ih] = opts.imageSize || [1920, 1080];
-  const dotColour = (opts.teams && (opts.teams.B || opts.teams.A)) || '#f6b02f';
+  const laneB = opts.lanes && opts.lanes.B && (opts.lanes.B.colour || opts.lanes.B.color);
+  const dotColour = laneB || (opts.teams && (opts.teams.B || opts.teams.A)) || '#f6b02f';
   ctx.fillStyle = '#0d1117';
   ctx.fillRect(0, 0, g.cw, g.ch);
   ctx.fillStyle = '#161b22';
