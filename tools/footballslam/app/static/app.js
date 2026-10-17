@@ -882,12 +882,22 @@ function applyPart() {
   }
 }
 
+async function fetchPartMap() {
+  const base = "data/" + encodeURIComponent(sceneId(scene)) + "/";
+  const stem = els.simulate.checked ? "map_sim" : "map";
+  const part = ((scene && scene.parts) || [])[partIndex];
+  if (part && part.part_id) {
+    const doc = await fetchOptional(rel(base + stem + "_" + encodeURIComponent(part.part_id) + ".json"));
+    if (doc) return doc;
+  }
+  return fetchOptional(rel(base + stem + ".json"));
+}
+
 async function loadMapOnly() {
   if (!scene) return;
   const gen = ++mapGen;
   const sceneGen = loadGen;
-  const name = els.simulate.checked ? "map_sim.json" : "map.json";
-  const doc = await fetchOptional(rel("data/" + encodeURIComponent(sceneId(scene)) + "/" + name));
+  const doc = await fetchPartMap();
   if (gen !== mapGen || sceneGen !== loadGen) return;
   applyMap(doc);
   updateSimBadge();
@@ -900,13 +910,12 @@ async function loadScene(index) {
   applyChrome();
   fillParts();
   const base = "data/" + encodeURIComponent(sceneId(scene)) + "/";
-  const mapName = els.simulate.checked ? "map_sim.json" : "map.json";
   const [segmentDoc, attackDoc, anomalyDoc, alertDoc, map] = await Promise.all([
     fetchOptional(rel(base + "segments.json")),
     fetchOptional(rel(base + "attacks.json")),
     fetchOptional(rel(base + "anomalies.json")),
     fetchOptional(rel(base + "track_alerts.json")),
-    fetchOptional(rel(base + mapName))
+    fetchPartMap()
   ]);
   if (gen !== loadGen) return;
   segmentRows = listOf(segmentDoc, ["segments", "items"]);
@@ -1006,6 +1015,7 @@ function bind() {
     if (quiet) return;
     partIndex = Number(els.partSelect.value) || 0;
     applyPart();
+    loadMapOnly();
   });
   els.simulate.addEventListener("change", () => {
     updateSimBadge();
