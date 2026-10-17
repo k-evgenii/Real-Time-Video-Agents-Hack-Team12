@@ -21,7 +21,7 @@ from vss import VSS, yolo_infer  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DET_ROOT = os.path.join(ROOT, "data", "raw", "det")
-KEEP = {"person": 0.3, "sports ball": 0.15, "ball": 0.15, "referee": 0.3}
+KEEP = {c: 0.35 for c in ("car", "truck", "bus", "motorcycle", "person", "bicycle")}
 
 
 def seg_id_of(source):
@@ -93,10 +93,7 @@ def detect(vss, source, out, engine="auto", keep_video=True):
             "seconds": round(time.time() - t0, 2)}
     json.dump(meta, open(os.path.join(out, "meta.json"), "w"))
     n_frames = max(1, len(frames))
-    persons = sum(1 for r_ in rows if r_["cls"] != "sports ball" and r_["cls"] != "ball")
-    ball_frames = len({r_["frame"] for r_ in rows if r_["cls"] in ("sports ball", "ball")})
-    meta["persons_per_frame"] = round(persons / n_frames, 2)
-    meta["ball_frac"] = round(ball_frames / n_frames, 3)
+    meta["objects_per_frame"] = round(len(rows) / n_frames, 2)
     return meta
 
 
@@ -127,13 +124,10 @@ def main():
         m = detect(vss, s, out, a.engine)
         stats.append(m)
         print(f"{seg_id_of(s)} engine={m['engine']} frames={m['n_frames']} fps={m['fps']:.2f} "
-              f"{m['width']}x{m['height']} persons/frame={m.get('persons_per_frame')} "
-              f"ball={m.get('ball_frac')} {m['seconds']}s")
-    ppf = [m["persons_per_frame"] for m in stats if "persons_per_frame" in m]
-    bf = [m["ball_frac"] for m in stats if "ball_frac" in m]
-    if ppf:
-        print(f"TOTAL segments={len(stats)} mean persons/frame={sum(ppf)/len(ppf):.2f} "
-              f"mean ball-frame fraction={sum(bf)/len(bf):.3f}")
+              f"{m['width']}x{m['height']} objects/frame={m.get('objects_per_frame')} {m['seconds']}s")
+    opf = [m["objects_per_frame"] for m in stats if "objects_per_frame" in m]
+    if opf:
+        print(f"TOTAL segments={len(stats)} mean objects/frame={sum(opf)/len(opf):.2f}")
 
 
 if __name__ == "__main__":
