@@ -1,0 +1,10 @@
+[
+  {
+    "part_id": "m1_h1_p01",
+    "file": "parent.mp4",
+    "object_key": "team-12/20261017_130755_4330ad63.mp4",
+    "t_offset_s": 0,
+    "duration_s": 11.83,
+    "note": "re-upload of 20261017_112414_45a57211 because that parent was not fully indexed (segment 1 missing) so reingest returned 0 complete chunks"
+  }
+]

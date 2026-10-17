@@ -1,0 +1,385 @@
+{
+  "match_id": "i24",
+  "segment_len_s": 5.0,
+  "parse_rate": 1.0,
+  "segments": [
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0001",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0002",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "M",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The traffic appears to be light to moderate, with vehicles maintaining safe following distances and no signs of congestion.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0003",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0004",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0005",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Traffic is flowing smoothly in both directions, with vehicles maintaining steady speeds and appropriate following distances.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0006",
+      "part_id": "20261001_055315_scene1_p1c1_chunk_0001",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055315_scene1_p1c1_chunk_0001_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0001",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0002",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "M",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0003",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0004",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0005",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 10,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055405_scene1_p1c1_chunk_0003_0006",
+      "part_id": "20261001_055405_scene1_p1c1_chunk_0003",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055405_scene1_p1c1_chunk_0003_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 8,
+      "n_peds": 0,
+      "light": "D",
+      "note": "UNCLEAR",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0001",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 5.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_001_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The overall traffic pattern is smooth and uninterrupted, with no signs of congestion or accidents.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0002",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 2,
+      "t0": 5.0,
+      "t1": 10.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_002_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "M",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "Traffic flows smoothly in both directions with light to moderate volume.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0003",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 3,
+      "t0": 10.0,
+      "t1": 15.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_003_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The traffic flow is smooth and free-flowing, with no signs of congestion or delays.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0004",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 4,
+      "t0": 15.0,
+      "t1": 20.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_004_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The overall traffic pattern is smooth and uninterrupted, with no signs of congestion or accidents.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0005",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 5,
+      "t0": 20.0,
+      "t1": 25.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_005_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "F",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The overall movement of vehicles is consistent and orderly, with each vehicle maintaining its lane and following the flow of traffic without any lane changes or sudden maneuvers.",
+      "parse_ok": true
+    },
+    {
+      "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0006",
+      "part_id": "20261001_055730_scene1_p1c2_chunk_0001",
+      "idx": 6,
+      "t0": 25.0,
+      "t1": 30.0,
+      "source": "s3://team-12-vss-chunks-segments/segments/20261001_055730_scene1_p1c2_chunk_0001_segment_006_of_006.mp4",
+      "original_video": "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4",
+      "camera_id": "i24_cam-1",
+      "flow": "M",
+      "scene": "H",
+      "direction": "X",
+      "events": [
+        "none"
+      ],
+      "n_vehicles": 0,
+      "n_peds": 0,
+      "light": "D",
+      "note": "The overall traffic flow is smooth and uninterrupted, with no signs of congestion, accidents, or near-misses.",
+      "parse_ok": true
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "match_id": "i24",
+  "attacks": [
+    {
+      "attack_id": "i24_e001",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 0.0,
+      "t1": 5.0,
+      "seg_ids": [
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0001"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e002",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "M",
+      "t0": 5.0,
+      "t1": 10.0,
+      "seg_ids": [
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0002"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e003",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 10.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0003",
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0004",
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0005",
+        "i24_20261001_055315_scene1_p1c1_chunk_0001_0006"
+      ],
+      "n_seg": 4,
+      "duration_s": 20.0,
+      "zones": [
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "i24_e004",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 0.0,
+      "t1": 5.0,
+      "seg_ids": [
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0001"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e005",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "M",
+      "t0": 5.0,
+      "t1": 10.0,
+      "seg_ids": [
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0002"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e006",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 10.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0003",
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0004",
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0005",
+        "i24_20261001_055405_scene1_p1c1_chunk_0003_0006"
+      ],
+      "n_seg": 4,
+      "duration_s": 20.0,
+      "zones": [
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "i24_e007",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 0.0,
+      "t1": 5.0,
+      "seg_ids": [
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0001"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e008",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "M",
+      "t0": 5.0,
+      "t1": 10.0,
+      "seg_ids": [
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0002"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e009",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "F",
+      "t0": 10.0,
+      "t1": 25.0,
+      "seg_ids": [
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0003",
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0004",
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0005"
+      ],
+      "n_seg": 3,
+      "duration_s": 15.0,
+      "zones": [
+        "H",
+        "H",
+        "H"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "i24_e010",
+      "match_id": "i24",
+      "team": "A",
+      "flow": "M",
+      "t0": 25.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "i24_20261001_055730_scene1_p1c2_chunk_0001_0006"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "end"
+    }
+  ]
+}

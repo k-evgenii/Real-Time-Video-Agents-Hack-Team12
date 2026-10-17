@@ -1,0 +1,52 @@
+{
+  "match_id": "m1",
+  "k": 5,
+  "feature_names": [
+    "duration_s",
+    "n_seg",
+    "share_attacking",
+    "max_zone",
+    "progression",
+    "n_shots",
+    "n_turnover_ev",
+    "share_fast",
+    "mean_players",
+    "ended_by_code"
+  ],
+  "per_team": {
+    "A": [
+      {
+        "attack_id": "m1_a001",
+        "rank": 1,
+        "s_feat": null,
+        "s_emb": null,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reasons": [
+          "not enough attacks for this team (1 < 2)"
+        ],
+        "t0": 5.0,
+        "t1": 11.83,
+        "team": "A",
+        "moment": {
+          "seg_id": "m1_h1_p01_0001",
+          "t": 10.0,
+          "why": "shot; The goalkeeper dives to his right to make a save."
+        }
+      }
+    ],
+    "B": []
+  }
+}

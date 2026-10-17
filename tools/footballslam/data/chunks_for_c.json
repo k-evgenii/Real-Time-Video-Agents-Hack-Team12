@@ -1,0 +1,35 @@
+{
+  "note": "Role A scene list for index.json. At most three parent chunks per camera, 90 seconds each.",
+  "scenes": [
+    {
+      "match_id": "i24",
+      "camera_id": "i24_cam-1",
+      "map_mode": "FLOW",
+      "parts": [
+        "s3://team-12-vss-chunks/team-12/20261001_055315_scene1_p1c1_chunk_0001.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_055405_scene1_p1c1_chunk_0003.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_055730_scene1_p1c2_chunk_0001.mp4"
+      ]
+    },
+    {
+      "match_id": "neighborhood",
+      "camera_id": "neighborhood_cam-1",
+      "map_mode": "FLOW",
+      "parts": [
+        "s3://team-12-vss-chunks/team-12/20261001_072628_neighborhood_20260901_chunk_0007.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_072603_neighborhood_20260901_chunk_0006.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_073133_neighborhood_20260901_chunk_0019.mp4"
+      ]
+    },
+    {
+      "match_id": "pie",
+      "camera_id": "pie_cam-3",
+      "map_mode": "NONE",
+      "parts": [
+        "s3://team-12-vss-chunks/team-12/20261001_062240_set02_video_chunk_0010.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_063806_set03_video_chunk_0015.mp4",
+        "s3://team-12-vss-chunks/team-12/20261001_063740_set03_video_chunk_0014.mp4"
+      ]
+    }
+  ]
+}

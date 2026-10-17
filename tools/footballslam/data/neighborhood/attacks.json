@@ -1,0 +1,173 @@
+{
+  "match_id": "neighborhood",
+  "attacks": [
+    {
+      "attack_id": "neighborhood_e001",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "F",
+      "t0": 5.0,
+      "t1": 20.0,
+      "seg_ids": [
+        "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0002",
+        "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0003",
+        "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0004"
+      ],
+      "n_seg": 3,
+      "duration_s": 15.0,
+      "zones": [
+        "R",
+        "R",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "neighborhood_e002",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "M",
+      "t0": 20.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0005",
+        "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0006"
+      ],
+      "n_seg": 2,
+      "duration_s": 10.0,
+      "zones": [
+        "R",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "neighborhood_e003",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "F",
+      "t0": 10.0,
+      "t1": 25.0,
+      "seg_ids": [
+        "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0003",
+        "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0004",
+        "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0005"
+      ],
+      "n_seg": 3,
+      "duration_s": 15.0,
+      "zones": [
+        "R",
+        "R",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "neighborhood_e004",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "M",
+      "t0": 25.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "neighborhood_20261001_072628_neighborhood_20260901_chunk_0007_0006"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "H"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "H",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "neighborhood_e005",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "M",
+      "t0": 0.0,
+      "t1": 5.0,
+      "seg_ids": [
+        "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0001"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "R"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "neighborhood_e006",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "F",
+      "t0": 5.0,
+      "t1": 15.0,
+      "seg_ids": [
+        "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0002",
+        "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0003"
+      ],
+      "n_seg": 2,
+      "duration_s": 10.0,
+      "zones": [
+        "R",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "neighborhood_e007",
+      "match_id": "neighborhood",
+      "team": "A",
+      "flow": "M",
+      "t0": 20.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0005",
+        "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0006"
+      ],
+      "n_seg": 2,
+      "duration_s": 10.0,
+      "zones": [
+        "R",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "end"
+    }
+  ]
+}

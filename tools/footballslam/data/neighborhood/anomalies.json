@@ -1,0 +1,186 @@
+{
+  "match_id": "neighborhood",
+  "k": 5,
+  "feature_names": [
+    "duration_s",
+    "n_seg",
+    "mean_vehicles",
+    "max_vehicles",
+    "mean_peds",
+    "n_risk_events",
+    "n_manoeuvres",
+    "share_dense_or_stopped",
+    "flow_code",
+    "ended_by_code"
+  ],
+  "per_team": {
+    "A": [
+      {
+        "attack_id": "neighborhood_e007",
+        "t0": 20.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 1,
+        "s_feat": 0.757,
+        "s_emb": 1.686,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        "reasons": [
+          "ended-by code 5.0\u03c3 above camera median (2 vs 0)",
+          "duration 0.0\u03c3 above camera median (10 s vs 10 s)",
+          "segments 0.0\u03c3 above camera median (2 vs 2)"
+        ],
+        "moment": {
+          "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0006",
+          "t": 25.0,
+          "why": "none; Calm and routine"
+        }
+      },
+      {
+        "attack_id": "neighborhood_e001",
+        "t0": 5.0,
+        "t1": 20.0,
+        "team": "A",
+        "rank": 2,
+        "s_feat": 1.114,
+        "s_emb": 1.237,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.674,
+          0.674,
+          -5.0,
+          0.0,
+          5.0,
+          0.0,
+          0.0,
+          0.0,
+          -5.0,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 5.0\u03c3 below camera median (0.33 vs 1.00)",
+          "mean pedestrians 5.0\u03c3 above camera median (0.67 vs 0.00)",
+          "flow code 5.0\u03c3 below camera median (free vs moderate)"
+        ],
+        "moment": {
+          "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0004",
+          "t": 15.0,
+          "why": "none; A silver car is seen driving on a residential street, moving from the left side of the frame toward the right."
+        }
+      },
+      {
+        "attack_id": "neighborhood_e006",
+        "t0": 5.0,
+        "t1": 15.0,
+        "team": "A",
+        "rank": 3,
+        "s_feat": 1.0,
+        "s_emb": 1.008,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          -5.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -5.0,
+          0.0
+        ],
+        "reasons": [
+          "mean vehicles 5.0\u03c3 below camera median (0.50 vs 1.00)",
+          "flow code 5.0\u03c3 below camera median (free vs moderate)",
+          "duration 0.0\u03c3 above camera median (10 s vs 10 s)"
+        ],
+        "moment": {
+          "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0003",
+          "t": 10.0,
+          "why": "none; Stationary vehicle"
+        }
+      },
+      {
+        "attack_id": "neighborhood_e005",
+        "t0": 0.0,
+        "t1": 5.0,
+        "team": "A",
+        "rank": 4,
+        "s_feat": 0.892,
+        "s_emb": 1.0,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          -0.674,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reasons": [
+          "duration 0.7\u03c3 below camera median (5 s vs 10 s)",
+          "segments 0.7\u03c3 below camera median (1 vs 2)",
+          "mean vehicles 0.0\u03c3 above camera median (1.00 vs 1.00)"
+        ],
+        "moment": {
+          "seg_id": "neighborhood_20261001_073133_neighborhood_20260901_chunk_0019_0001",
+          "t": 0.0,
+          "why": "none; Steady pace"
+        }
+      },
+      {
+        "attack_id": "neighborhood_e002",
+        "t0": 20.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 5,
+        "s_feat": 1.232,
+        "s_emb": 0.409,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          -5.0,
+          0.0,
+          5.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        "reasons": [
+          "mean vehicles 5.0\u03c3 below camera median (0.50 vs 1.00)",
+          "mean pedestrians 5.0\u03c3 above camera median (0.50 vs 0.00)",
+          "ended-by code 5.0\u03c3 above camera median (2 vs 0)"
+        ],
+        "moment": {
+          "seg_id": "neighborhood_20261001_072603_neighborhood_20260901_chunk_0006_0006",
+          "t": 25.0,
+          "why": "none; A person wearing a white top is walking on the sidewalk in the lower left corner of the frame, moving from left to right."
+        }
+      }
+    ],
+    "B": []
+  }
+}

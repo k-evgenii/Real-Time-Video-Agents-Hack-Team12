@@ -1,0 +1,167 @@
+{
+  "match_id": "pie",
+  "attacks": [
+    {
+      "attack_id": "pie_e001",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "S",
+      "t0": 0.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "pie_20261001_062240_set02_video_chunk_0010_0001",
+        "pie_20261001_062240_set02_video_chunk_0010_0002",
+        "pie_20261001_062240_set02_video_chunk_0010_0003",
+        "pie_20261001_062240_set02_video_chunk_0010_0004",
+        "pie_20261001_062240_set02_video_chunk_0010_0005",
+        "pie_20261001_062240_set02_video_chunk_0010_0006"
+      ],
+      "n_seg": 6,
+      "duration_s": 30.0,
+      "zones": [
+        "S",
+        "S",
+        "S",
+        "S",
+        "S",
+        "S"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "S",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "pie_e002",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "F",
+      "t0": 0.0,
+      "t1": 5.0,
+      "seg_ids": [
+        "pie_20261001_063740_set03_video_chunk_0014_0001"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "S"
+      ],
+      "events": [
+        "cyclist"
+      ],
+      "max_zone": "S",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "pie_e003",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "M",
+      "t0": 5.0,
+      "t1": 10.0,
+      "seg_ids": [
+        "pie_20261001_063740_set03_video_chunk_0014_0002"
+      ],
+      "n_seg": 1,
+      "duration_s": 5.0,
+      "zones": [
+        "S"
+      ],
+      "events": [
+        "none"
+      ],
+      "max_zone": "S",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "pie_e004",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "S",
+      "t0": 10.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "pie_20261001_063740_set03_video_chunk_0014_0003",
+        "pie_20261001_063740_set03_video_chunk_0014_0004",
+        "pie_20261001_063740_set03_video_chunk_0014_0005",
+        "pie_20261001_063740_set03_video_chunk_0014_0006"
+      ],
+      "n_seg": 4,
+      "duration_s": 20.0,
+      "zones": [
+        "S",
+        "S",
+        "S",
+        "S"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "S",
+      "ended_by": "end"
+    },
+    {
+      "attack_id": "pie_e005",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "S",
+      "t0": 0.0,
+      "t1": 20.0,
+      "seg_ids": [
+        "pie_20261001_063806_set03_video_chunk_0015_0001",
+        "pie_20261001_063806_set03_video_chunk_0015_0002",
+        "pie_20261001_063806_set03_video_chunk_0015_0003",
+        "pie_20261001_063806_set03_video_chunk_0015_0004"
+      ],
+      "n_seg": 4,
+      "duration_s": 20.0,
+      "zones": [
+        "S",
+        "R",
+        "S",
+        "R"
+      ],
+      "events": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "max_zone": "R",
+      "ended_by": "flow_change"
+    },
+    {
+      "attack_id": "pie_e006",
+      "match_id": "pie",
+      "team": "A",
+      "flow": "F",
+      "t0": 20.0,
+      "t1": 30.0,
+      "seg_ids": [
+        "pie_20261001_063806_set03_video_chunk_0015_0005",
+        "pie_20261001_063806_set03_video_chunk_0015_0006"
+      ],
+      "n_seg": 2,
+      "duration_s": 10.0,
+      "zones": [
+        "S",
+        "S"
+      ],
+      "events": [
+        "none",
+        "none"
+      ],
+      "max_zone": "S",
+      "ended_by": "end"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "match_id": "i24",
+  "k": 5,
+  "feature_names": [
+    "duration_s",
+    "n_seg",
+    "mean_vehicles",
+    "max_vehicles",
+    "mean_peds",
+    "n_risk_events",
+    "n_manoeuvres",
+    "share_dense_or_stopped",
+    "flow_code",
+    "ended_by_code"
+  ],
+  "per_team": {
+    "A": [
+      {
+        "attack_id": "i24_e007",
+        "t0": 0.0,
+        "t1": 5.0,
+        "team": "A",
+        "rank": 1,
+        "s_feat": 1.0,
+        "s_emb": 4.923,
+        "flagged": true,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          -0.674,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reasons": [
+          "max vehicles 0.7\u03c3 below camera median (0.00 vs 4.00)",
+          "mean vehicles 0.7\u03c3 below camera median (0.00 vs 3.25)",
+          "duration 0.0\u03c3 above camera median (5 s vs 5 s)"
+        ],
+        "moment": {
+          "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0001",
+          "t": 0.0,
+          "why": "none; The overall traffic pattern is smooth and uninterrupted, with no signs of congestion or accidents."
+        }
+      },
+      {
+        "attack_id": "i24_e010",
+        "t0": 25.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 2,
+        "s_feat": 1.664,
+        "s_emb": 2.975,
+        "flagged": true,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          -0.674,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0,
+          5.0
+        ],
+        "reasons": [
+          "flow code 5.0\u03c3 above camera median (moderate vs free)",
+          "ended-by code 5.0\u03c3 above camera median (2 vs 0)",
+          "max vehicles 0.7\u03c3 below camera median (0.00 vs 4.00)"
+        ],
+        "moment": {
+          "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0006",
+          "t": 25.0,
+          "why": "none; The overall traffic flow is smooth and uninterrupted, with no signs of congestion, accidents, or near-misses."
+        }
+      },
+      {
+        "attack_id": "i24_e008",
+        "t0": 5.0,
+        "t1": 10.0,
+        "team": "A",
+        "rank": 3,
+        "s_feat": 0.769,
+        "s_emb": 3.279,
+        "flagged": true,
+        "agree": false,
+        "z": [
+          0.0,
+          0.0,
+          -0.674,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0,
+          0.0
+        ],
+        "reasons": [
+          "flow code 5.0\u03c3 above camera median (moderate vs free)",
+          "max vehicles 0.7\u03c3 below camera median (0.00 vs 4.00)",
+          "mean vehicles 0.7\u03c3 below camera median (0.00 vs 3.25)"
+        ],
+        "moment": {
+          "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0002",
+          "t": 5.0,
+          "why": "none; Traffic flows smoothly in both directions with light to moderate volume."
+        }
+      },
+      {
+        "attack_id": "i24_e009",
+        "t0": 10.0,
+        "t1": 25.0,
+        "team": "A",
+        "rank": 4,
+        "s_feat": 1.949,
+        "s_emb": 2.033,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          5.0,
+          5.0,
+          -0.674,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reasons": [
+          "duration 5.0\u03c3 above camera median (15 s vs 5 s)",
+          "segments 5.0\u03c3 above camera median (3 vs 1)",
+          "max vehicles 0.7\u03c3 below camera median (0.00 vs 4.00)"
+        ],
+        "moment": {
+          "seg_id": "i24_20261001_055730_scene1_p1c2_chunk_0001_0005",
+          "t": 20.0,
+          "why": "none; The overall movement of vehicles is consistent and orderly, with each vehicle maintaining its lane and following the flow of traffic without any lane changes or sudden maneuvers."
+        }
+      },
+      {
+        "attack_id": "i24_e003",
+        "t0": 10.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 5,
+        "s_feat": 1.566,
+        "s_emb": 0.502,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          5.0,
+          5.0,
+          0.674,
+          1.012,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        "reasons": [
+          "duration 5.0\u03c3 above camera median (20 s vs 5 s)",
+          "segments 5.0\u03c3 above camera median (4 vs 1)",
+          "ended-by code 5.0\u03c3 above camera median (2 vs 0)"
+        ],
+        "moment": {
+          "seg_id": "i24_20261001_055315_scene1_p1c1_chunk_0001_0006",
+          "t": 25.0,
+          "why": "none; UNCLEAR"
+        }
+      }
+    ],
+    "B": []
+  }
+}

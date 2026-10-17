@@ -1,0 +1,186 @@
+{
+  "match_id": "pie",
+  "k": 5,
+  "feature_names": [
+    "duration_s",
+    "n_seg",
+    "mean_vehicles",
+    "max_vehicles",
+    "mean_peds",
+    "n_risk_events",
+    "n_manoeuvres",
+    "share_dense_or_stopped",
+    "flow_code",
+    "ended_by_code"
+  ],
+  "per_team": {
+    "A": [
+      {
+        "attack_id": "pie_e001",
+        "t0": 0.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 1,
+        "s_feat": 1.411,
+        "s_emb": 3.092,
+        "flagged": true,
+        "agree": false,
+        "z": [
+          1.349,
+          1.349,
+          1.169,
+          2.023,
+          -0.337,
+          0.0,
+          0.0,
+          0.674,
+          0.674,
+          0.674
+        ],
+        "reasons": [
+          "max vehicles 2.0\u03c3 above camera median (5.00 vs 3.50)",
+          "duration 1.3\u03c3 above camera median (30 s vs 15 s)",
+          "segments 1.3\u03c3 above camera median (6 vs 3)"
+        ],
+        "moment": {
+          "seg_id": "pie_20261001_062240_set02_video_chunk_0010_0006",
+          "t": 25.0,
+          "why": "none; Traffic is stopped at a red light."
+        }
+      },
+      {
+        "attack_id": "pie_e002",
+        "t0": 0.0,
+        "t1": 5.0,
+        "team": "A",
+        "rank": 2,
+        "s_feat": 1.079,
+        "s_emb": 2.074,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          -0.899,
+          -0.899,
+          0.809,
+          0.674,
+          -1.012,
+          0.0,
+          0.0,
+          -0.674,
+          -1.349,
+          -0.674
+        ],
+        "reasons": [
+          "flow code 1.3\u03c3 below camera median (free vs dense)",
+          "mean pedestrians 1.0\u03c3 below camera median (1.00 vs 1.50)",
+          "duration 0.9\u03c3 below camera median (5 s vs 15 s)"
+        ],
+        "moment": {
+          "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0001",
+          "t": 0.0,
+          "why": "cyclist; No vehicles are blocking the lanes, and there are no visible violations or hazards."
+        }
+      },
+      {
+        "attack_id": "pie_e006",
+        "t0": 20.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 3,
+        "s_feat": 0.931,
+        "s_emb": 1.314,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          -0.45,
+          -0.45,
+          0.27,
+          0.674,
+          0.0,
+          0.0,
+          0.0,
+          -0.674,
+          -1.349,
+          0.674
+        ],
+        "reasons": [
+          "flow code 1.3\u03c3 below camera median (free vs dense)",
+          "ended-by code 0.7\u03c3 above camera median (2 vs 1)",
+          "max vehicles 0.7\u03c3 above camera median (4.00 vs 3.50)"
+        ],
+        "moment": {
+          "seg_id": "pie_20261001_063806_set03_video_chunk_0015_0006",
+          "t": 25.0,
+          "why": "none; No vehicles are blocking the lanes, and there are no visible violations or hazards."
+        }
+      },
+      {
+        "attack_id": "pie_e003",
+        "t0": 5.0,
+        "t1": 10.0,
+        "team": "A",
+        "rank": 4,
+        "s_feat": 0.972,
+        "s_emb": 0.686,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          -0.899,
+          -0.899,
+          -0.27,
+          -0.674,
+          1.012,
+          0.0,
+          0.0,
+          -0.674,
+          -0.674,
+          -0.674
+        ],
+        "reasons": [
+          "mean pedestrians 1.0\u03c3 above camera median (2.00 vs 1.50)",
+          "duration 0.9\u03c3 below camera median (5 s vs 15 s)",
+          "segments 0.9\u03c3 below camera median (1 vs 3)"
+        ],
+        "moment": {
+          "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0002",
+          "t": 5.0,
+          "why": "none; No traffic lights or stop signs visible"
+        }
+      },
+      {
+        "attack_id": "pie_e004",
+        "t0": 10.0,
+        "t1": 30.0,
+        "team": "A",
+        "rank": 5,
+        "s_feat": 1.011,
+        "s_emb": 0.551,
+        "flagged": false,
+        "agree": false,
+        "z": [
+          0.45,
+          0.45,
+          -0.809,
+          -0.674,
+          0.0,
+          0.0,
+          0.0,
+          0.674,
+          0.674,
+          0.674
+        ],
+        "reasons": [
+          "mean vehicles 0.8\u03c3 below camera median (2.50 vs 3.25)",
+          "flow code 0.7\u03c3 above camera median (stopped vs dense)",
+          "ended-by code 0.7\u03c3 above camera median (2 vs 1)"
+        ],
+        "moment": {
+          "seg_id": "pie_20261001_063740_set03_video_chunk_0014_0006",
+          "t": 25.0,
+          "why": "none; No traffic lights or road signs visible"
+        }
+      }
+    ],
+    "B": []
+  }
+}

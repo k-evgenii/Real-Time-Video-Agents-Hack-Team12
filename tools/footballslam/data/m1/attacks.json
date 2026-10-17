@@ -1,0 +1,28 @@
+{
+  "match_id": "m1",
+  "attacks": [
+    {
+      "attack_id": "m1_a001",
+      "match_id": "m1",
+      "team": "A",
+      "t0": 5.0,
+      "t1": 11.83,
+      "seg_ids": [
+        "m1_h1_p01_0000",
+        "m1_h1_p01_0001"
+      ],
+      "n_seg": 2,
+      "duration_s": 6.83,
+      "zones": [
+        "A",
+        "A"
+      ],
+      "events": [
+        "shot",
+        "shot"
+      ],
+      "max_zone": "A",
+      "ended_by": "end"
+    }
+  ]
+}
