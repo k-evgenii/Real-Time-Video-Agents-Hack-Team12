@@ -30,6 +30,7 @@ ALLOWED_NAMES = frozenset(
     {"segments", "attacks", "anomalies", "map", "track_alerts", "map_sim"}
 )
 MATCH_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
+PART_MAP = re.compile(r"^map(_sim)?_[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
 STREAM_HEADERS = ("Content-Range", "Accept-Ranges", "Content-Type", "Content-Length")
 CHUNK = 64 * 1024
 
@@ -195,7 +196,7 @@ def matches():
 
 @app.get("/data/<match>/<name>.json")
 def match_data(match, name):
-    if name not in ALLOWED_NAMES or not _valid_match(match):
+    if (name not in ALLOWED_NAMES and not PART_MAP.fullmatch(name)) or not _valid_match(match):
         return _json_error("not found", 404)
     if DATA_URL:
         return _fetch_remote_json(match, name)
