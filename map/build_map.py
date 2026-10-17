@@ -235,6 +235,10 @@ def build(a):
         print(f"injected {a.inject} into pass-1 track {tid} at t={at_t:.1f}s")
     out2, scene2, _, _ = run_pass(frames, W, H, dt, tau=tau)
     alerts = scene2.finish()
+    if a.mode == "NONE":
+        # moving camera: image-space physics is meaningless, keep boxes only
+        alerts = []
+        out2 = [(t, [(tid, cls, b, 0.0) for tid, cls, b, _ in entries]) for t, entries in out2]
     for al in alerts:
         al["part_id"] = a.part
         al["scene"] = a.scene
