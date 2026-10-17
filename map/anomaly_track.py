@@ -56,7 +56,9 @@ class FlowField:
             return None, n
         d = self.sum[r, c]
         norm = np.hypot(*d)
-        return (d / norm if norm > 0 else None), n
+        if norm < 0.6 * n:          # cell straddles opposite carriageways: no single lane direction to violate
+            return None, n
+        return d / norm, n
 
     def to_json(self):
         cells = []
@@ -87,7 +89,8 @@ class SceneAnomaly:
         self.warmup, self.enter_n = warmup, enter_n
         self.fixed_tau = tau
         self.pool = []
-        self.flow = flow or FlowField(W, H)
+        self.flow = flow or FlowField(W, H)          # display field (slower tracks too, fills both carriageways)
+        self.rule_flow = FlowField(W, H)             # wrong_way field: only tracks above the full speed gate
         self.states = {}
         self.alerts = []
 
@@ -156,11 +159,13 @@ class SceneAnomaly:
             speed = math.hypot(vx, vy)
             wrong_now = False
             if speed > vmin:
-                d, n = self.flow.direction(px, py)
+                d, n = self.rule_flow.direction(px, py)
                 if d is not None and (vx * d[0] + vy * d[1]) / speed < WRONG_COS:
                     wrong_now = True
                 if st.alert is None:
-                    self.flow.add(px, py, vx, vy)
+                    self.rule_flow.add(px, py, vx, vy)
+            if speed > vmin / 3 and st.alert is None:
+                self.flow.add(px, py, vx, vy)
             st.wrong = st.wrong + 1 if wrong_now else 0
 
             if st.cooldown > 0:

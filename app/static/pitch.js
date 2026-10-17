@@ -4,6 +4,8 @@
 //   const i = findFrame(map.frames, globalT);                 // binary search on frames[].t (-1 if none)
 //   const trails = buildTrails(map.frames, i, 2);              // Map<id, [[x_dm,y_dm],…]> over the last 2 s
 //   drawPitch(canvas, map.frames[i] || null, { teams: { A: '#2f6df6', B: '#e8e8e8' }, trails, mode: map.mode });
+//   Traffic: drawPitch(canvas, frame, { mode: 'FLOW', flow: map.flow, imageSize: map.image_size, trails,
+//            teams: { B: '#f6b02f' } })  -> image frame, 8×8 lane-flow arrows, dots red when score_x100 (p[8]) >= 100.
 // Idempotent: clears and redraws the whole canvas each call; sizes the backing store to clientWidth × devicePixelRatio,
 // so give the canvas a CSS width/height and `min-width: 0` on a grid/flex parent (else it grows every frame).
 
@@ -76,9 +78,91 @@ function textOn(hex) {
   return (0.299 * r + 0.587 * gg + 0.114 * b) > 150 ? '#111' : '#fff';
 }
 
+// FLOW mode (traffic): the "pitch" is the camera image normalised to x∈[-525,525], y∈[-340,340].
+function drawFlow(canvas, ctx, g, frame, opts) {
+  const { k, ox, oy, dpr } = g;
+  const X = (x) => ox + x * k, Y = (y) => oy + y * k;
+  const [iw, ih] = opts.imageSize || [1920, 1080];
+  const dotColour = (opts.teams && (opts.teams.B || opts.teams.A)) || '#f6b02f';
+  ctx.fillStyle = '#0d1117';
+  ctx.fillRect(0, 0, g.cw, g.ch);
+  ctx.fillStyle = '#161b22';
+  ctx.fillRect(X(-L / 2), Y(-Wd / 2), L * k, Wd * k);
+  ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+  ctx.lineWidth = Math.max(2, 2 * dpr);
+  ctx.strokeRect(X(-L / 2), Y(-Wd / 2), L * k, Wd * k);
+
+  const flow = opts.flow;
+  if (flow && flow.cells) {
+    const cw = L / flow.cols, chh = Wd / flow.rows;
+    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let c = 1; c < flow.cols; c++) { ctx.moveTo(X(-L / 2 + c * cw), Y(-Wd / 2)); ctx.lineTo(X(-L / 2 + c * cw), Y(Wd / 2)); }
+    for (let r = 1; r < flow.rows; r++) { ctx.moveTo(X(-L / 2), Y(-Wd / 2 + r * chh)); ctx.lineTo(X(L / 2), Y(-Wd / 2 + r * chh)); }
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(120,200,255,0.75)';
+    ctx.fillStyle = 'rgba(120,200,255,0.75)';
+    ctx.lineWidth = Math.max(2, 2.5 * dpr);
+    for (let i = 0; i < flow.cells.length; i++) {
+      const [ux, uy, n] = flow.cells[i];
+      if (!n || (ux === 0 && uy === 0)) continue;
+      let dx = ux * L / iw, dy = uy * Wd / ih;
+      const nrm = Math.hypot(dx, dy) || 1;
+      dx /= nrm; dy /= nrm;
+      const len = Math.min(cw, chh) * 0.42 * Math.min(1, n / 50);
+      const cx = X(-L / 2 + ((i % flow.cols) + 0.5) * cw), cy = Y(-Wd / 2 + (Math.floor(i / flow.cols) + 0.5) * chh);
+      const ex = cx + dx * len * k, ey = cy + dy * len * k;
+      ctx.beginPath(); ctx.moveTo(cx - dx * len * k, cy - dy * len * k); ctx.lineTo(ex, ey); ctx.stroke();
+      const hl = Math.max(6 * dpr, len * k * 0.35), a = Math.atan2(dy, dx);
+      ctx.beginPath(); ctx.moveTo(ex, ey);
+      ctx.lineTo(ex - hl * Math.cos(a - 0.45), ey - hl * Math.sin(a - 0.45));
+      ctx.lineTo(ex - hl * Math.cos(a + 0.45), ey - hl * Math.sin(a + 0.45));
+      ctx.closePath(); ctx.fill();
+    }
+  }
+  if (!frame) return;
+  const alerting = new Set();
+  for (const p of frame.p) if ((p[8] || 0) >= 100) alerting.add(p[0]);
+  if (opts.trails) {
+    ctx.lineCap = 'round';
+    for (const [id, pts] of opts.trails) {
+      if (pts.length < 2) continue;
+      const hot = alerting.has(id);
+      ctx.strokeStyle = hot ? '#ff4d4f' : dotColour;
+      ctx.lineWidth = (hot ? 5 : 2) * dpr;
+      for (let i = 1; i < pts.length; i++) {
+        ctx.globalAlpha = (hot ? 0.9 : 0.5) * i / pts.length;
+        ctx.beginPath(); ctx.moveTo(X(pts[i - 1][0]), Y(pts[i - 1][1])); ctx.lineTo(X(pts[i][0]), Y(pts[i][1])); ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  const r = Math.max(8 * k, 7 * dpr);
+  ctx.font = `bold ${Math.round(14 * dpr)}px system-ui, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+  for (const p of frame.p) {
+    const x = X(p[2]), y = Y(p[3]);
+    const hot = (p[8] || 0) >= 100;
+    ctx.fillStyle = hot ? '#ff4d4f' : p[1] === 1 ? '#7ee787' : dotColour;
+    ctx.beginPath(); ctx.arc(x, y, hot ? r * 1.5 : (p[1] === 1 ? r * 0.7 : r), 0, Math.PI * 2); ctx.fill();
+    if (hot) {
+      ctx.strokeStyle = '#fff'; ctx.lineWidth = 2 * dpr; ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.fillText(String(p[0]), x, y - r * 1.7);
+    }
+  }
+}
+
 export function drawPitch(canvas, frame, opts = {}) {
   const ctx = canvas.getContext('2d');
   const g = geom(canvas);
+  if (opts.mode === 'FLOW') {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    drawFlow(canvas, ctx, g, frame, opts);
+    return;
+  }
   const { k, ox, oy, dpr } = g;
   const teams = opts.teams || { A: '#2f6df6', B: '#e8e8e8' };
   const colours = [teams.A, teams.B, GREY];

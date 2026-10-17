@@ -29,7 +29,7 @@ import { drawPitch, findFrame, buildTrails } from '../app/static/pitch.js';
 import { drawOverlay } from '../app/static/overlay.js';
 
 const q = new URLSearchParams(location.search);
-const teams = { A: q.get('a') || '#2f6df6', B: q.get('b') || '#e8e8e8' };
+const teams = { A: q.get('a') || '#2f6df6', B: q.get('b') || (q.get('mode') === 'FLOW' ? '#f6b02f' : '#e8e8e8') };
 const video = document.getElementById('video');
 const vcanvas = document.getElementById('vcanvas');
 const pitch = document.getElementById('pitch');
@@ -55,8 +55,8 @@ function loop(now) {
   const t = useVideo ? t0 + video.currentTime : t0 + ((now - start) / 1000) % Math.max(0.001, tEnd - t0);
   const i = findFrame(map.frames, t);
   const fr = i >= 0 ? map.frames[i] : null;
-  drawPitch(pitch, fr, { teams, trails: buildTrails(map.frames, i, 2), mode });
-  drawOverlay(vcanvas, fr, video, { teams, showIds: true, imageSize: map.image_size });
+  drawPitch(pitch, fr, { teams, trails: buildTrails(map.frames, i, 2), mode, flow: map.flow, imageSize: map.image_size });
+  drawOverlay(vcanvas, fr, video, { teams, showIds: true, imageSize: map.image_size, alerts: map.alerts });
   frames++;
   if (now - last > 500) {
     document.getElementById('fps').textContent = `${Math.round(frames * 1000 / (now - last))} fps`;
