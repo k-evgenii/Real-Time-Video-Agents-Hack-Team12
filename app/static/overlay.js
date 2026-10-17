@@ -15,7 +15,45 @@ function scoreColour(s) {
   return '#3fb950';
 }
 
+// App convention: drawOverlay(canvas, frame, opts) where the app has already sized the canvas to the video's pixel
+// size and positioned it over the displayed picture, so source pixels map 1:1 onto canvas pixels.
+function drawOnSourceCanvas(canvas, frame, opts) {
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!frame || !frame.p) return;
+  const shown = canvas.getBoundingClientRect().width || canvas.width;
+  const px = canvas.width / shown;                       // canvas pixels per CSS pixel
+  const fs = Math.round(15 * px);
+  const sel = opts.highlight != null ? opts.highlight : (opts.selectedTrackId != null ? opts.selectedTrackId : null);
+  const alerts = opts.alerts || [];
+  ctx.font = `bold ${fs}px system-ui, sans-serif`;
+  ctx.textBaseline = 'bottom';
+  ctx.textAlign = 'left';
+  for (let n = 0; n < frame.p.length; n++) {
+    const p = frame.p[n];
+    const score = p.length > 8 ? p[8] : 0;
+    const c = scoreColour(score);
+    const hl = sel != null && sel === p[0];
+    const x = p[4] - p[6] / 2, y = p[5] - p[7] / 2;
+    ctx.lineWidth = (hl || score >= 100 ? 4 : 2) * px;
+    ctx.strokeStyle = hl ? '#ffffff' : c;
+    ctx.strokeRect(x, y, p[6], p[7]);
+    let label = String(p[0]);
+    if (score >= 100) {
+      const a = alerts.find((al) => al.track_id === p[0] && frame.t >= al.t0 - 0.5 && frame.t <= al.t1 + 0.5);
+      label += ' ' + (a ? a.type.replace(/_/g, ' ').toUpperCase() : 'ALERT');
+    }
+    const tw = ctx.measureText(label).width + 6 * px;
+    ctx.fillStyle = 'rgba(0,0,0,0.65)';
+    ctx.fillRect(x, y - fs - 2 * px, tw, fs + 2 * px);
+    ctx.fillStyle = hl ? '#ffffff' : c;
+    ctx.fillText(label, x + 3 * px, y);
+  }
+}
+
 export function drawOverlay(canvas, frame, videoEl, opts = {}) {
+  if (!videoEl || typeof videoEl.videoWidth !== 'number') return drawOnSourceCanvas(canvas, frame, videoEl || {});
   const dpr = window.devicePixelRatio || 1;
   const cw = Math.max(1, Math.round(videoEl.clientWidth * dpr));
   const ch = Math.max(1, Math.round(videoEl.clientHeight * dpr));
