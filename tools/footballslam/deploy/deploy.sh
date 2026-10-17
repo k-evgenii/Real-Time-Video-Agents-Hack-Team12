@@ -149,6 +149,7 @@ while IFS=$'\t' read -r key rel || [[ -n "${key:-}" ]]; do
   dest="/code/${rel}"
   mkdir -p "$(dirname "$dest")"
   cp -L "/src/${key}" "$dest"
+  case "$dest" in *.gz) gunzip -f "$dest" ;; esac
 done < /src/manifest.txt
 cd /code
 if [[ -f requirements.txt ]]; then
@@ -340,13 +341,19 @@ add_json() {
 if [[ -f "$DATA_DIR/index.json" ]]; then
   add_json "$DATA_DIR/index.json" "index.json"
 fi
-# Every scene file, not an allowlist. track_alerts.json and map_sim.json
-# are packed or offloaded with the rest when they exist.
-if [[ -d "$DATA_DIR" ]]; then
+# Scene JSON for the scenes in index.json only (fixtures and raw caches are not served), gzipped so it fits
+# the ConfigMap; the pod's start script gunzips anything ending in .gz.
+mkdir -p "$WORKDIR/gz"
+SCENES=$(python3 -c 'import json,sys; print(" ".join(m["match_id"] for m in json.load(open(sys.argv[1]))["matches"]))' "$DATA_DIR/index.json")
+for scene in $SCENES; do
+  [[ -d "$DATA_DIR/$scene" ]] || continue
   while IFS= read -r -d '' src; do
-    add_json "$src" "${src#"$DATA_DIR/"}"
-  done < <(find "$DATA_DIR" -mindepth 2 -maxdepth 2 -type f \( -name '*.json' -o -name 'track_alerts.json' -o -name 'map_sim.json' \) -print0 | sort -z)
-fi
+    rel=${src#"$DATA_DIR/"}
+    mkdir -p "$WORKDIR/gz/$(dirname "$rel")"
+    gzip -9c "$src" > "$WORKDIR/gz/$rel.gz"
+    add_json "$WORKDIR/gz/$rel.gz" "$rel.gz"
+  done < <(find "$DATA_DIR/$scene" -maxdepth 1 -type f -name '*.json' -print0 | sort -z)
+done
 
 OFFLOAD=0
 DATA_URL=""
